@@ -1,0 +1,302 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>房源管理</title>
+		<link rel="shortcut icon" href="<%=basePath %>assets/images/favicon.png" type="image/x-icon" />
+		<link href="<%=basePath %>assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="<%=basePath %>assets/css/reset.css" rel="stylesheet" type="text/css" />
+		<link href="<%=basePath %>assets/css/animate.min.css" rel="stylesheet" type="text/css" />
+		<link href="<%=basePath %>assets/css/style.css" rel="stylesheet" type="text/css" />
+		<link href="<%=basePath %>assets/css/system.css" rel="stylesheet" type="text/css" />
+		<link href="<%=basePath %>assets/css/houseManage.css" rel="stylesheet" type="text/css" />
+		<!--账户信息引进-->
+		<link href="<%=basePath %>assets/css/common.css" rel="stylesheet" type="text/css" />
+		<link href="<%=basePath %>assets/css/order.css" rel="stylesheet" type="text/css" />
+		<link href="<%=basePath %>assets/css/accoutInfo.css" rel="stylesheet" type="text/css" />
+		<!--账户信息引进-->
+		<!--账户安全引进-->
+		<link href="<%=basePath %>assets/css/safe.css" rel="stylesheet" type="text/css" />
+		<link href="<%=basePath %>assets/js/lib/honeySwitch.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="<%=basePath %>assets/css/button/normalize.css">
+		<link rel="stylesheet" href="<%=basePath %>assets/css/button/style.css" media="screen" type="text/css" />
+		<!--版本介绍引进-->
+		<!-- -->
+		<link href="<%=basePath %>assets/css/version.css" rel="stylesheet" type="text/css" />
+		<!-- -->
+	</head>
+
+	<body>
+		<div class='page-topbar'>
+	<include src="daohang.jsp"></include>	
+		</div>
+		<div class="page-container row-fluid container-fluid">
+			<div class="page-sidebar fixedscroll">
+				<div class="page-sidebar-wrapper" id="main-menu-wrapper">
+					<include src="<%=basePath %>getFuMenu.action"></include>
+				</div>
+			</div>
+			<section id="main-content" class=" ">
+				<div class="wrapper main-wrapper row">
+					<div class="order-top clearfix">
+						<div class="order-left">
+							<span class="chunk"></span>
+							<span class="title">房源管理</span>
+							<!-- <select class="choose">
+								<option value="">选择状态</option>
+								<option value="">所有状态</option>
+								<option value="">已上线</option>
+								<option value="">已下线</option>
+							</select> -->
+						</div>
+						<div class="order-right">
+							<span class="search" onclick="addHouse();">创建房源</span>
+						</div>
+					</div>
+					<div class="content-box list">
+						<ul class="content">
+						<c:forEach items="${pageBean.pageList}" var="m">
+							<li class="house-list clearfix">
+								<div class="con-left clearfix">
+									<input type="checkbox" style="float:left; margin-top:50px; margin-left: 10px;" name="mid" value="${m.id }"/>
+		                          
+		                           <c:if test="${fn:length(m.img)>='50'}">
+			                             <img src="<%=basePath %>house_img/${m.img}" class="house-img" />
+									</c:if>
+								
+									<div class="house-box">
+										<span>${m.net_house_addr_name }</span>
+										<span>${m.net_house_addr }</span>
+										<span>${m.house }</span>
+									</div>
+								</div>
+								<span  class="more"><a href="##" class="operate look" onclick="findById('${m.id }')">了解更多</a></span>
+								<div class="con-right">
+									<div class="house-plat">
+										<span>分组：${m.groups }</span>
+										<span>所在平台： ${m.source }</span>
+										<span>${m.use_state }</span>
+									</div>
+								</div>
+							</li>
+						</c:forEach>
+						</ul>
+						<div class="notice-bottom clearfix">
+							<span class="del" onclick="del()">删除</span>
+							<span class="online shang" onclick="shang()">上线</span>
+							<span class="online xia" onclick="xia()">下线</span>
+							<div class="page-box">
+								<a href="##" class="sure" onclick="jump();">确定</a>
+								<input type="text" class="point-to" id="jump"/>
+								<span class="tiao">跳转到</span>
+								<ul class="page">
+										<!-- 上一页 -->
+								<c:if test="${pageBean.currentPage==1}">
+									<li class="disabled">
+										<a href="javascript:;" id="pageleft">
+											<
+										</a>
+									</li>
+								</c:if>
+								<c:if test="${pageBean.currentPage!=1}">
+									<li>
+										<a href="${pageContext.request.contextPath }/findHouseByPage.action?currentPage=${pageBean.currentPage-1 }">
+											<
+										</a>
+									</li>
+								</c:if>
+									
+								<!-- 循环总页数 -->
+								<c:forEach begin="1" end="${pageBean.totalPage }" var="page">
+									<c:if test="${pageBean.currentPage==page }">
+										<li class="active"><a href="javascript:void(0);">${page }</a></li>
+									</c:if> 
+									<c:if test="${pageBean.currentPage!=page }">
+										<li><a href="${pageContext.request.contextPath }/findHouseByPage.action?currentPage=${page }">${page }</a></li>
+									</c:if> 
+								</c:forEach>
+									<!--下一页-->
+								<c:if test="${pageBean.currentPage==pageBean.totalPage}">
+									<li class="disabled">
+										<a href="javascript:;" id="pageright">
+										>
+										</a>
+									</li>
+								</c:if>
+								<c:if test="${pageBean.currentPage!=pageBean.totalPage}">
+									<li>
+										<a href="${pageContext.request.contextPath }/findHouseByPage.action?currentPage=${pageBean.currentPage+1 }">
+										>
+										</a>
+									</li>
+								</c:if>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+		<script src="<%=basePath %>assets/js/jquery-1.11.2.min.js"></script>
+		<script src="<%=basePath %>assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+		<script src="<%=basePath %>assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+		<script src="<%=basePath %>assets/plugins/viewport/viewportchecker.js"></script>
+		<script src="<%=basePath %>assets/js/scripts.js"></script>
+		<script src="<%=basePath %>assets/js/include.js"></script>
+			<!-- 新增js start -->
+		<script src="<%=basePath %>assets/js/citySelect/city.min.js"></script>
+		<script src="<%=basePath %>assets/js/citySelect/cityselect.js"></script>
+		<script src="<%=basePath %>assets/js/common.js"></script>
+		<%-- <script src="<%=basePath %>assets/js/system.js"></script> --%>
+		<script src="<%=basePath %>assets/js/notice.js"></script>
+		<!-- 新增js end -->
+		<script type="text/javascript">
+		function addHouse(){
+			window.location.href= "${pageContext.request.contextPath }/addHouse.jsp";
+		}
+		
+		function jump(){
+			var pages = document.getElementById("jump").value;
+			if(pages == 0){
+				alert("请输入跳转页数")
+			}else{
+				window.location.href= "${pageContext.request.contextPath }/findHouseByPage.action?currentPage=" + pages;
+			}
+		}
+
+		function findById(ids){
+			window.location.href= "${pageContext.request.contextPath }/queryHouseById.action?id=" + ids;
+		}
+		
+		//删除一条
+		function del(){
+			//获取选取的id
+			var ids =$("input[name='mid']:checked");
+			//创建数组
+			var cids = new Array();
+			//进行数组遍历
+			$.each(ids,function(index,elem){
+				var id = $(this).val();//正在遍历的数组
+				cids.push(id);
+			});
+			if(ids.size() == 1){
+				$.ajax({
+					url:"houseDel.action",
+					data:{"id":cids.toString()},
+					dataType:"json",
+					type:"post",
+					success:function (date) {
+						var mm = date.result;
+						if(mm == "success"){
+							alert("删除成功！");
+							//刷新本页
+							window.location.href = "${pageContext.request.contextPath }/findHouseByPage.action";
+						}
+					}, 
+					error:function (error) {
+						alert("数据删除异常！");
+					}
+				});
+			}else{
+				alert("请选中一条数据");
+			}
+			
+		}
+		
+		//上线
+		function shang(){
+			//获取选取的id
+			var ids =$("input[name='mid']:checked");
+			//创建数组
+			var cids = new Array();
+			//进行数组遍历
+			$.each(ids,function(index,elem){
+				var id = $(this).val();//正在遍历的数组
+				cids.push(id);
+			});
+			if(ids.size() == 1){
+				$.ajax({
+					url:"GoCheck.action",
+					data:{"id":cids.toString()},
+					dataType:"json",
+					type:"post",
+					success:function (date) {
+						var mm = date.result;
+						if(mm == "success"){
+							alert("上线成功");
+							//刷新本页
+							window.location.href = "${pageContext.request.contextPath }/findHouseByPage.action";
+						}
+						else{
+							alert("上线异常！");
+						};
+					}, 
+					error:function (error) {
+						alert("数据异常！");
+					}
+				});
+			}else{
+				alert("请选中一条数据");
+			}
+			
+		}
+		
+		
+		//下线
+		function xia(){
+			//获取选取的id
+			var ids =$("input[name='mid']:checked");
+			//创建数组
+			var cids = new Array();
+			//进行数组遍历
+			$.each(ids,function(index,elem){
+				var id = $(this).val();//正在遍历的数组
+				cids.push(id);
+			});
+			if(ids.size() == 1){
+				$.ajax({
+					url:"GoCheck.action",
+					data:{"id":cids.toString()},
+					dataType:"json",
+					type:"post",
+					success:function (date) {
+						var mm = date.result;
+						if(mm == "success"){
+							alert("下线成功！");
+							//刷新本页
+							window.location.href = "${pageContext.request.contextPath }/findHouseByPage.action";
+						}else{
+							alert("下线异常！");
+						};
+					}, 
+					error:function (error) {
+						alert("数据异常！");
+					}
+				});
+			}else{
+				alert("请选中一条数据");
+			}
+			
+		}
+		
+		$(function(){
+			if("${userid}"==""){
+		    	   document.location.replace("login.jsp");	
+			    }
+		});
+		
+		</script>
+	</body>
+
+</html>

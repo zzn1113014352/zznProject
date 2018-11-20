@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>订单列表</title>
+		<link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/reset.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/animate.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/system.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/order.css" rel="stylesheet" type="text/css" />
+		<!--分页引入-->
+		<link href="assets/css/layui.css" rel="stylesheet" type="text/css" />
+		<!--账户信息引进-->
+		<link href="assets/css/common.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/order.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/accoutInfo.css" rel="stylesheet" type="text/css" />
+		<!--账户信息引进-->
+		<!--账户安全引进-->
+		<link href="assets/css/safe.css" rel="stylesheet" type="text/css" />
+		<link href="assets/js/lib/honeySwitch.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="assets/css/button/normalize.css">
+		<link rel="stylesheet" href="assets/css/button/style.css" media="screen" type="text/css" />
+		<!--版本介绍引进-->
+		<!-- -->
+		<link href="assets/css/version.css" rel="stylesheet" type="text/css" />
+		<!-- -->
+	</head>
+
+	<body>
+		<div class='page-topbar'>
+			<div class='logo-area'>
+				云&nbsp;&nbsp;&nbsp;&nbsp;客
+			</div>
+			<div class='quick-area clearfix'>
+				<div class='pull-right'>
+					<div id="userCenter">
+						<span class="userName">
+							<img src="assets/images/tx.png" class="tx" />
+							<span class="name" style="width:auto;height:auto;overflow:hidden;">小小的鱼</span>
+							<span id="triggle">
+
+							</span>
+						</span>
+						<span class="userCenterSelect">
+							<span item="information" class="spanHover">
+								<img src="assets/images/icon/detail.png" alt=""/>
+								<span>账户信息</span>
+							</span>
+							<span item="safety" class="spanHover">
+								<img src="assets/images/icon/safe.png" alt=""/>
+								<span>账号安全</span>
+							</span>
+							<span item="intro" class="spanHover">
+								<img src="assets/images/icon/version.png" alt=""/>
+								<span>版本介绍</span>
+							</span>
+							<span item="exit" class="spanHover">
+								<img src="assets/images/icon/exit.png" alt=""/>
+								<span>退出登录</span>
+							</span>
+						</span>
+					</div>
+					<!--<span class="name">小小的鱼</span>-->
+					<!--<img src="assets/images/tx.png" class="tx" />-->
+					<div id="accountCenter">
+						<span class="userName">
+							<img src="assets/images/info.png" class="info" item="system"/>
+						</span>
+						<!--<span class="accountCenterSelect none">-->
+							<!--<span item="system" class="spanHover">-->
+								<!--<img src="assets/images/icon/system.png" alt=""/>-->
+								<!--<span>系统公告</span>-->
+							<!--</span>-->
+							<!--<span item="service" class="spanHover">-->
+								<!--<img src="assets/images/icon/notice.png" alt=""/>-->
+								<!--<span>服务通知</span>-->
+							<!--</span>-->
+						<!--</span>-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-container row-fluid container-fluid">
+			<div class="page-sidebar fixedscroll">
+				<div class="page-sidebar-wrapper" id="main-menu-wrapper">
+					<include src="menu.html"></include>
+				</div>
+			</div>
+			<section id="main-content">
+				<div class="wrapper main-wrapper row">
+					<div class="order-top clearfix">
+						<div class="order-left">
+							<span class="chunk"></span>
+							<span class="title">订单列表</span>
+							<select class="choose plat">
+								<option value="选择平台">选择平台</option>
+								<option value="选择平台">全部 </option>
+								<option value="选择平台">入住</option>
+								<option value="选择平台">已完成 </option>
+								<option value="选择平台">已取消/拒绝</option>
+							</select>
+							<select class="choose">
+								<option value="选择平台">选择状态</option>
+								<option value="选择平台">已入住</option>
+								<option value="选择平台">已预订</option>
+								<option value="选择平台">已完成 </option>
+								<option value="选择平台">已住房</option>
+							</select>
+						</div>
+						<div class="order-right">
+							<span class="search order">搜索</span>
+							<input type="text" placeholder="房号/姓名/手机/身份证" class="write number" />
+						</div>
+					</div>
+					<div class="content-box">
+						<table class="content order-list">
+							<tr class="kuai"></tr>
+							<tr>
+								<th class="check-box">
+									<input type="checkbox" class="check" />
+								</th>
+								<th>房源</th>
+								<th>订单来源</th>
+								<th>入住时间</th>
+								<th>到期时间</th>
+								<th>姓名</th>
+								<th>联系方式</th>
+								<th>房费</th>
+								<th>入住人数</th>
+								<th>操作</th>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" class="check" />
+								</td>
+								<td>爱彼迎4期1254</td>
+								<td>途家网</td>
+								<td>2017-08-24</td>
+								<td>2017-08-26</td>
+								<td>张帅</td>
+								<td>15386495248</td>
+								<td>￥205</td>
+								<td>2名成人/1名儿童/0名婴幼儿</td>
+								<td>
+									<a href="" class="operate">查看</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" class="check" />
+								</td>
+								<td>爱彼迎4期1254</td>
+								<td>途家网</td>
+								<td>2017-08-24</td>
+								<td>2017-08-26</td>
+								<td>张帅</td>
+								<td>15386495248</td>
+								<td>￥205</td>
+								<td>2名成人/1名儿童/0名婴幼儿</td>
+								<td>
+									<a href="" class="operate">查看</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" class="check" />
+								</td>
+								<td>爱彼迎4期1254</td>
+								<td>途家网</td>
+								<td>2017-08-24</td>
+								<td>2017-08-26</td>
+								<td>张帅</td>
+								<td>15386495248</td>
+								<td>￥205</td>
+								<td>2名成人/1名儿童/0名婴幼儿</td>
+								<td>
+									<a href="" class="operate">查看</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" class="check" />
+								</td>
+								<td>爱彼迎4期1254</td>
+								<td>途家网</td>
+								<td>2017-08-24</td>
+								<td>2017-08-26</td>
+								<td>张帅</td>
+								<td>15386495248</td>
+								<td>￥205</td>
+								<td>2名成人/1名儿童/0名婴幼儿</td>
+								<td>
+									<a href="" class="operate">查看</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" class="check" />
+								</td>
+								<td>爱彼迎4期1254</td>
+								<td>途家网</td>
+								<td>2017-08-24</td>
+								<td>2017-08-26</td>
+								<td>张帅</td>
+								<td>15386495248</td>
+								<td>￥205</td>
+								<td>2名成人/1名儿童/0名婴幼儿</td>
+								<td>
+									<a href="" class="operate">查看</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" class="check" />
+								</td>
+								<td>爱彼迎4期1254</td>
+								<td>途家网</td>
+								<td>2017-08-24</td>
+								<td>2017-08-26</td>
+								<td>张帅</td>
+								<td>15386495248</td>
+								<td>￥205</td>
+								<td>2名成人/1名儿童/0名婴幼儿</td>
+								<td>
+									<a href="" class="operate">查看</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" class="check" />
+								</td>
+								<td>爱彼迎4期1254</td>
+								<td>途家网</td>
+								<td>2017-08-24</td>
+								<td>2017-08-26</td>
+								<td>张帅</td>
+								<td>15386495248</td>
+								<td>￥205</td>
+								<td>2名成人/1名儿童/0名婴幼儿</td>
+								<td>
+									<a href="" class="operate">查看</a>
+								</td>
+							</tr>
+						</table>
+						<div class="notice-bottom clearfix">
+							<div class="page-box">
+								<a href="#" class="sure">确定</a>
+								<input type="text" class="point-to" />
+								<span class="tiao">跳转到</span>
+								<ul class="page">
+									<li>
+										<a href="">
+											<</a>
+									</li>
+									<li>
+										<a href="#">1</a>
+									</li>
+									<li class="active">
+										<a href="#">2</a>
+									</li>
+									<li>
+										<a href="#">3</a>
+									</li>
+									<li>
+										<a href="#">></a>
+									</li>
+									<li>
+										<a href="#">>></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<script src="assets/js/jquery-1.11.2.min.js"></script>
+		<script src="assets/js/citySelect/cityselect.js"></script>
+		<script src="assets/js/common.js"></script>
+		<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+		<script src="assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+		<script src="assets/plugins/viewport/viewportchecker.js"></script>
+		<script src="assets/js/layui.js" type="text/javascript"></script>
+		<script src="assets/js/scripts.js"></script>
+		<script src="assets/js/include.js"></script>
+		<script>
+			layui.use(['laypage', 'layer'], function() {
+				var laypage = layui.laypage,
+					layer = layui.layer;
+
+				//完整功能
+				laypage.render({
+					elem: 'demo7',
+					count: 100,
+					layout: ['count', 'prev', 'page', 'next', 'limit', 'refresh', 'skip'],
+					jump: function(obj) {
+						console.log(obj)
+					}
+				});
+
+			});
+		</script>
+	</body>
+
+</html>

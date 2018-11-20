@@ -1,0 +1,19 @@
+package com.dhcc.bussiness;
+
+import java.text.DateFormat;
+import java.util.Date;
+
+import org.apache.commons.lang.time.DateFormatUtils;
+import org.apache.http.impl.cookie.DateUtils;
+
+import com.dhcc.bussiness.sdk.UpUtils;
+
+
+public class test {
+	public static void main(String[] args) throws Exception {
+		String s = "2018-11-13 14:23:02";
+		Date parseDate = DateUtils.parseDate(s,new String[] {"yyyy-MM-dd HH:mm:ss"});
+		String format = DateFormatUtils.format(parseDate, "yyyyMMddHHmmss");
+		System.out.println(format);
+	}
+}

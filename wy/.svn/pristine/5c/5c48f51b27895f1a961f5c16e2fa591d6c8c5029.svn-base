@@ -1,0 +1,120 @@
+@media only screen and (min-width: 1200px) {
+	.sync{
+		display: block;
+		float: left;
+		width:69px;
+		height:22px;
+		background: #3478F6;
+		border-radius:11px;
+		margin-right: 36px;
+		text-align: center;
+		color: #FFFFFF;
+		font-size: 12px;
+		margin-top: 26px;
+	}
+	.batch{
+		display: block;
+		float: left;
+		width:69px;
+		height:20px;
+		line-height: 20px;
+		border:1px solid #3478F6;
+		border-radius:11px;
+		color: #3478F6;
+		text-align: center;
+		font-size: 12px;
+		margin-top: 26px;
+	}
+	.list{
+		margin-top: 17px;
+	}
+	.house-list{
+		padding: 8px 0 13px 0px;
+		border-bottom: 3px solid rgba(241,242,247,1);
+	}
+	.house-list .con-left{
+		float: left;
+	}
+	.house-list .con-left .house-img{
+		float: left;
+		margin: 32px 40px 0 40px;
+		width: 80px;
+		height: 50px;
+		border-radius: 6px;
+	}
+	.house-list .con-left .house-box{
+		float: left;
+	}
+	.house-list .con-left .house-box span{
+		display: block;
+		font-size:14px;
+		color: #666666;
+		margin-top: 17px;
+	}
+	.more{
+		display: block;
+		float: right;
+		margin-top: 50px;
+		line-height: 100%;
+		padding-right: 66px;
+		margin-left: 105px;
+		cursor:pointer;
+	}
+	.house-list .con-right{
+		float: right;
+	}
+	.house-list .con-right .house-plat{
+		margin-top: 18px;
+	}
+	.house-list .con-right .house-plat span{
+		display: block;
+		margin-top: 22px;
+		color: #666666;
+	}
+	.list .notice-bottom {
+		margin-top: 30px;
+	}
+	/*.plat-box{
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		margin-top: -140px;
+		margin-left: -287px;
+		width:574px;
+		height:279px;
+		background:rgba(255,255,255,1);
+		border:1px solid rgba(247,247,247,1);
+		border-radius:6px;
+		z-index: 101;
+	}*/
+}
+@media only screen and (max-width: 1200px) {
+	.sync{
+		display: block;
+		float: left;
+		width:111px;
+		height:35px;
+		line-height: 35px;
+		background: #3478F6;
+		border-radius:18px;
+		margin-right: 50px;
+		text-align: center;
+		color: #FFFFFF;
+		font-size: 18px;
+		margin-top: 45px;
+	}
+	.batch{
+		display: block;
+		float: left;
+		width:111px;
+		height:35px;
+		line-height: 35px;
+		border:1px solid #3478F6;
+		border-radius:18px;
+		color: #3478F6;
+		text-align: center;
+		font-size: 18px;
+		margin-top: 45px;
+	}
+
+}

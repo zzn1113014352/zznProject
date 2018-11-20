@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>实时通讯</title>
+		<link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/animate.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div class='page-topbar'>
+			<div class='logo-area'>
+				全国网约住宿信息登记服务平台
+			</div>
+			<div class='quick-area'>
+				<div class='pull-right'>
+					<a href="login.html" class="exit">
+						<img src="assets/images/exit.png" />
+					</a>
+					<span class="name">小小的鱼</span>
+					<img src="assets/images/tx.png" class="tx" />
+					<img src="assets/images/info.png" class="info" />
+				</div>
+			</div>
+
+		</div>
+		<div class="page-container row-fluid container-fluid">
+			<div class="page-sidebar fixedscroll">
+				<div class="page-sidebar-wrapper" id="main-menu-wrapper">
+					<include src="menu.html"></include>
+				</div>
+			</div>
+			<section id="main-content" class=" ">
+				<div class="wrapper main-wrapper row" style=''>
+
+				</div>
+			</section>
+			
+		</div>
+		<script src="assets/js/jquery-1.11.2.min.js"></script>
+		<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+		<script src="assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+		<script src="assets/plugins/viewport/viewportchecker.js"></script>
+		<script src="assets/js/scripts.js"></script>
+		<script src="assets/js/include.js"></script>
+	</body>
+
+</html>
+
+

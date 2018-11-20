@@ -1,0 +1,92 @@
+@media only screen and (max-width: 1200px) {
+    .update-box{
+        width:1595px;
+        height:auto;
+        background:rgba(255,255,255,1);
+        border-radius:4px;
+        margin-top: 27px;
+        padding: 58px 0 67px 0;
+    }
+    .update-box li{
+        width: 100%;
+        height:auto;
+        overflow:hidden;
+        padding-left: 150px;
+        margin-bottom: 38px;
+    }
+    .update-box li.on i{
+        font-size: 18px;
+        color: #999;
+    }
+    .update-box li i{
+        display: block;
+        float: left;
+        width: 185px;
+        font-size:18px;
+        color:rgba(83,83,83,1);
+    }
+    .inforSwitchBox{
+        width:69px;
+        height:26px;
+        overflow:hidden;
+        background:#3478F6;
+        float:left;
+        margin-left:148px;
+        position:relative;
+        border-radius:14px;
+    }
+    .inforSwitchBox .inforSwitch{
+        width:24px;
+        height:24px;
+        overflow:hidden;
+        background:#fff;
+        position:absolute;
+        right:1px;
+        top:1px;
+        border-radius:50%;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .update-box{
+        width: 100%;
+        background: #FFFFFF;
+        margin-top: 17px;
+        padding: 36px 0 46px 94px;
+    }
+    .update-box li{
+        width: 100%;
+        height:auto;
+        overflow:hidden;
+        padding-left: 94px;
+        margin-bottom: 24px;
+    }
+    .update-box li i{
+        display: block;
+        float: left;
+        width: 115px;
+        font-size:14px;
+        font-style: normal;
+        color:rgba(83,83,83,1);
+    }
+    .inforSwitchBox{
+        width:43px;
+        height:17px;
+        overflow:hidden;
+        background:#3478F6;
+        float:left;
+        margin-left:93px;
+        position:relative;
+        border-radius:8px;
+    }
+    .inforSwitchBox .inforSwitch{
+        width:15px;
+        height:15px;
+        overflow:hidden;
+        background:#fff;
+        position:absolute;
+        right:1px;
+        top:1px;
+        border-radius:50%;
+    }
+
+}

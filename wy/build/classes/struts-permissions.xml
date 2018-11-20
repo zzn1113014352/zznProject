@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="per" extends="json-default">
+		<!-- 权限管理 start -->
+		<action name="findPermissionsByPage" class="com.dhcc.bussiness.permissions.PermissionsAction" method="findPermissionsByPage">
+			<result name="quanxianlist" type="redirect">powerManage.jsp</result>
+		</action>
+		<action name="delPermissionsId" class="com.dhcc.bussiness.permissions.PermissionsAction" method="delPermissionsId">
+			<result type="json"></result>
+		</action>
+		<action name="shouquanData" class="com.dhcc.bussiness.permissions.PermissionsAction" method="shouquanData">
+			<result type="json"></result>
+		</action>
+		<action name="addRenyuan" class="com.dhcc.bussiness.permissions.PermissionsAction" method="addRenyuan">
+			<result type="json"></result>
+		</action>
+		<action name="queryRenyuan" class="com.dhcc.bussiness.permissions.PermissionsAction" method="queryRenyuan">
+			<result type="json"></result>
+		</action>
+		<action name="shouquanDataId" class="com.dhcc.bussiness.permissions.PermissionsAction" method="shouquanDataId">
+			<result type="json"></result>
+		</action>
+		<action name="userSearchResult" class="com.dhcc.bussiness.permissions.PermissionsAction" method="userSearchResult">
+			<result type="json"></result>
+		</action>
+		<!-- 权限管理 end -->
+		
+		<!-- 所有用户 start -->
+		<action name="findAlluserByPage" class="com.dhcc.bussiness.alluser.AlluserAction" method="findAlluserByPage">
+			<result name="alluserlist" type="redirect">allUser.jsp</result>
+		</action>
+		<action name="delAlluserId" class="com.dhcc.bussiness.alluser.AlluserAction" method="delAlluserId">
+			<result type="json"></result>
+		</action>
+		<action name="user_sDel" class="com.dhcc.bussiness.alluser.AlluserAction" method="user_sDel">
+			<result type="json"></result>
+		</action>
+		<action name="insert_WyfUser" class="com.dhcc.bussiness.alluser.AlluserAction" method="insert_WyfUser">
+			<result type="json"></result>
+		</action>
+		<action name="update_WyfUser" class="com.dhcc.bussiness.alluser.AlluserAction" method="update_WyfUser">
+			<result type="json"></result>
+		</action>
+		<action name="findAlluserByPageId" class="com.dhcc.bussiness.alluser.AlluserAction" method="findAlluserByPageId">
+			<result type="json"></result>
+		</action>
+		<!-- 所有用户 end -->
+	</package>
+</struts>

@@ -1,0 +1,40 @@
+/*
+ * 公共标签重置样式
+ */
+@charset "utf-8";
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{padding:0;margin:0;}
+section,article,aside,header,footer,nav,dialog,figure,main{padding:0;margin:0;display:block;}
+/*设置默认字体*/
+body,button,input,select,textarea{font:12px Microsoft YaHei,arial,\5b8b\4f53;color:#333;background:#fff;border: none;}
+/*重置输入表单的字体大小和字体样式,使之继承父类字体*/
+h1,h2,h3,h4,h5,h6,input,textarea,select,button{font-size: 100%;font-family:inherit;}
+input,label,select,option,textarea,button,fieldset,legend{font-size:14px;font-family:"微软雅黑",arial;}
+/*在获取焦点时，去掉外面蓝框，主要针对input、链接类型*/
+:focus{outline: 0;}
+/*去掉默认的点和序列号*/
+ul,ol,li{list-style:none;}
+/*按钮的样式设置为手型*/
+button,.submit{cursor:pointer;}
+textarea{resize:none;outline:none;}
+address,cite,dfn,em,var,i{font-style:normal;}
+/*去掉加粗*/
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+/*strong{font-weight:normal;}*/
+/*去掉默认边框和底部空白区*/
+img{border:none;vertical-align:middle;}
+/*去掉表格边框之间的间距*/
+table{border-collapse: collapse;border-spacing: 0;}
+/*遵循爱恨LVHA原则，设置链接和颜色和下划线*/
+a,a:link,a:visited,a:hover,a:active{text-decoration:none; cursor: pointer;}
+sup{vertical-align: super;}
+sub{vertical-align: sub;}
+mark{background:none;}
+/*input::-ms-clear{display:none;}*/
+input{background:none;border:none;}
+input,button,select,textarea{outline:none!important;}
+
+.clearfix{*zoom:1}
+.clearfix:after{clear:both;content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.none{display: none;}
+

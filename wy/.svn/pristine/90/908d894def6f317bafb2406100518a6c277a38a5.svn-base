@@ -1,0 +1,11 @@
+package com.dhcc.bussiness;
+
+import com.dhcc.bussiness.sdk.UpUtils;
+
+
+public class test {
+	public static void main(String[] args) throws Exception {
+		UpUtils uu = new UpUtils();
+		uu.OrderUp("111", "111", "111", "111", "111", "111", "111");
+	}
+}

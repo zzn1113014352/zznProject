@@ -1,0 +1,78 @@
+/**
+ * 
+ */
+package com.dhcc.common.util;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+/**
+ * @author tiger
+ * 
+ */
+public class AuthorCheck implements Filter {
+	public void destroy() {
+	}
+
+	public void doFilter(ServletRequest arg0, ServletResponse arg1,
+			FilterChain arg2) throws IOException, ServletException {
+		HttpServletRequest request = (HttpServletRequest) arg0;
+		HttpServletResponse response = (HttpServletResponse) arg1;
+		String currentURL = request.getRequestURI(); // 取得根目录所对应的绝对路径:
+		String targetURL = currentURL.substring(currentURL.indexOf("/", 1),currentURL.length()); // 截取到当前文件名用于比较
+		HttpSession session = request.getSession(false);
+		if (!"/login.jsp".equals(targetURL)
+				&&!targetURL.contains("/orderManage.jsp")
+				&&!targetURL.contains("/houseManage.jsp")
+				&&!targetURL.contains("/tableManage.jsp")
+				&&!targetURL.contains("/operatStatis.jsp")
+				&&!targetURL.contains("/canalIncome.jsp")
+				&&!targetURL.contains("/customerCount.jsp")
+				&&!targetURL.contains("/powerManage.jsp")
+				&&!targetURL.contains("/realcom.jsp")
+				&&!targetURL.contains("/allUser.jsp")//所有用户
+				&&!targetURL.contains("/daohang.jsp")//导航
+				&&!targetURL.contains("/accountInfo.jsp")//账户信息
+				&&!targetURL.contains("/accountSafe.jsp")//账号安全
+				&&!targetURL.contains("/versionIntr.jsp")//版本介绍
+				&&!targetURL.contains("/inforSet.jsp")//消息设置
+				&&!targetURL.contains("/canalIncome.jsp")//财务统计详情
+				&&!targetURL.contains("/assets/")
+				&&!targetURL.contains("/head_img/")
+				&&!targetURL.contains("/house_img/")
+				&&!targetURL.contains("/bussiness/")){
+			// 判断当前页是否是重定向以后的登录页面页面，如果是就不做session的判断，防止出现死循环
+			if (session == null || session.getAttribute("userid") == null) {			
+				PrintWriter out = response.getWriter();
+				String url = request.getContextPath() + "/login.jsp";
+				out.print("<script> window.top.document.location.href='"+url+"'</script>");
+				out.flush();
+				out.close();
+				return;
+			}
+		}
+		// 加入filter链继续向下执行
+		arg2.doFilter(request, response);
+		/**
+		 * 调用FilterChain对象的doFilter方法。Filter接口的doFilter方法取一个FilterChain对象作 为它
+		 * 的一个参数。在调用此对象的doFilter方法时，激活下一个相关的过滤器。如果没有另
+		 * 一个过滤器与servlet或JSP页面关联，则servlet或JSP页面被激活。
+		 */
+
+	}
+
+	public void init(FilterConfig arg0) throws ServletException {
+
+	}
+
+}

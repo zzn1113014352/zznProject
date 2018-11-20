@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="sys" extends="json-default">
+		<!-- 登录 start -->
+		<action name="loginUser" class="com.dhcc.bussiness.login.LoginAction" method="loginUser">
+			<result type="json"></result>
+		</action>
+		<!-- 验证码 -->
+		<action name="valiCodeImg" class="com.dhcc.bussiness.login.LoginAction" method="valiCodeImg">
+		</action>
+		<action name="gainRandom" class="com.dhcc.bussiness.login.LoginAction" method="gainRandom">
+			<result type="json"></result>
+		</action>
+		<action name="updateUser" class="com.dhcc.bussiness.login.LoginAction" method="updateUser">
+			<result type="json"></result>
+		</action>
+		<action name="regUser" class="com.dhcc.bussiness.login.LoginAction" method="regUser">
+			<result type="json"></result>
+		</action>
+		<action name="remberUsername" class="com.dhcc.bussiness.login.LoginAction" method="remberUsername">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 目录 -->
+		<action name="getFuMenu" class="com.dhcc.bussiness.menu.MenuAction" method="getFuMenu">
+			 <result name="success1" type="redirect">bussiness/menu.jsp</result> 
+		</action>
+		<action name="getFuMenu2" class="com.dhcc.bussiness.menu.MenuAction" method="getFuMenu">
+			 <result name="success1" type="redirect">http://localhost:8080/Netty/bussiness/menu.jsp</result> 
+		</action>
+	
+		<!-- 查询id查询订单 -->
+		<action name="queryById" class="com.dhcc.bussiness.order.OrderAction" method="queryById">
+			<result type="json"></result>
+		</action>
+		<!-- 显示所有经营者自己的房子 -->
+		<action name="QueryHouse" class="com.dhcc.bussiness.order.OrderAction" method="QueryHouse">
+			<result type="json"></result>
+		</action>
+		<!-- 订单搜索 -->
+		<action name="queryByName" class="com.dhcc.bussiness.order.OrderAction" method="queryByName">
+			<result name="success3" type="redirect">orderManage.jsp</result>
+		</action>
+		<!-- 根据平台查询订单 -->
+		<action name="queryByPc" class="com.dhcc.bussiness.order.OrderAction" method="queryByPc">
+			<result name="success4" type="redirect">orderManage.jsp</result>
+		</action>
+		<!-- 分页查询订单 -->
+		<action name="findOrderByPage" class="com.dhcc.bussiness.order.OrderAction" method="findOrderByPage">
+			<result name="success5" type="redirect">orderManage.jsp</result>
+		</action>
+		<!-- 根据时间查询订单 -->
+		<action name="queryByTime" class="com.dhcc.bussiness.order.OrderAction" method="queryByTime">
+			<result name="Bytime" type="redirect">orderManage.jsp</result>
+		</action>
+		<!-- poi -->
+		<action name="importXls" class="com.dhcc.bussiness.order.UploadAction" method="importXls">
+			<result type="json"></result>
+		</action>
+		<!-- 查询所有平台 -->
+		<action name="showOpc" class="com.dhcc.bussiness.order_pc.OrderPcAction" method="showOpc">
+			<result type="json"></result> 
+		</action>
+		<!-- 查询所有订单状态 -->
+		<action name="showOsm" class="com.dhcc.bussiness.orderstate.OrderStateAction" method="showOsm">
+			<result type="json"></result>
+		</action>
+	
+		<!-- 版本介绍 -->
+		<action name="Versionnum" class="com.dhcc.bussiness.version.VersionAction" method="Versionnum">
+			<result type="json"></result>
+		</action>
+			<!-- 消息通知列表 start -->
+		<action name="noticeQueryList" class="com.dhcc.bussiness.notice.NoticeQueryListAction" method="noticeQueryList">
+			<result type="json"></result>
+		</action>
+		<!-- 消息通知列表删除 -->
+		<action name="noticeDel" class="com.dhcc.bussiness.notice.NoticeAction" method="noticeDel">
+			<result type="json"></result>
+		</action>
+		<!-- 消息通知列表单个查询 -->
+		<action name="noticeQueryById" class="com.dhcc.bussiness.notice.NoticeAction" method="noticeQueryById">
+			<result type="json"></result>
+		</action>
+		<!-- 消息通知列表修改 -->
+		<action name="updateNotice" class="com.dhcc.bussiness.notice.NoticeAction" method="updateNotice">
+			<result type="json"></result>
+		</action>
+		<!-- 消息通知列表添加 -->
+		<action name="noticeAdd" class="com.dhcc.bussiness.notice.NoticeAction" method="noticeAdd">
+			<result type="json"></result>
+		</action>
+		<!-- 消息通知列表改变字体颜色 -->
+		<action name="updateNoticeState" class="com.dhcc.bussiness.notice.NoticeAction" method="updateNoticeState">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 系统公告列表 start -->
+		<action name="serviceQueryList" class="com.dhcc.bussiness.system.SystemQueryListAction" method="serviceQueryList">
+			<result type="json"></result>
+		</action>
+		<!-- 系统公告列表删除 -->
+		<action name="serviceDel" class="com.dhcc.bussiness.system.SystemAction" method="serviceDel">
+			<result type="json"></result>
+		</action>
+		<!-- 系统公告列表单个查询 -->
+		<action name="serviceQueryById" class="com.dhcc.bussiness.system.SystemAction" method="serviceQueryById">
+			<result type="json"></result>
+		</action>
+		<!-- 系统公告列表修改 -->
+		<action name="updateService" class="com.dhcc.bussiness.system.SystemAction" method="updateService">
+			<result type="json"></result>
+		</action>
+		<!-- 系统公告添加 -->
+		<action name="serviceAdd" class="com.dhcc.bussiness.system.SystemAction" method="serviceAdd">
+			<result type="json"></result>
+		</action>
+		<!-- 系统公告改变字体颜色 -->
+		<action name="updateServiceState" class="com.dhcc.bussiness.system.SystemAction" method="updateServiceState">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 账户信息 -->
+		<action name="initUser" class="com.dhcc.bussiness.login.LoginAction" method="initUser">
+			<result type="json"></result>
+		</action>
+		<action name="upadteUserAllRE" class="com.dhcc.bussiness.login.LoginAction" method="upadteUserAllRE">
+			<result type="json"></result>
+		</action>
+		<action name="uploadFile" class="com.dhcc.bussiness.UploadAction" method="uploadFile">
+			<result type="json"></result>
+		</action>
+		<action name="gainData" class="com.dhcc.bussiness.login.LoginAction" method="gainData">
+			<result type="json"></result>
+		</action>
+		<action name="updateUserInfo" class="com.dhcc.bussiness.login.LoginAction" method="updateUserInfo">
+			<result type="json"></result>
+		</action>
+		<!-- 房源管理 -->
+		<action name="findHouseByPage" class="com.dhcc.bussiness.house.HouseAction" method="findHouseByPage">
+			<result name="success6" type="redirect">houseManage.jsp</result>
+		</action>
+		<action name="queryHouseById" class="com.dhcc.bussiness.house.HouseAction" method="queryHouseById">
+			<result name="houseDetail" type="redirect">houseDetail.jsp</result>
+		</action>
+		<action name="editHouseById" class="com.dhcc.bussiness.house.HouseAction" method="editHouseById">
+			<result name="editHouseById" type="redirect">editHouse.jsp</result>
+		</action>
+		<action name="editHouse" class="com.dhcc.bussiness.house.HouseAction" method="editHouse">
+			<result name="backHouse" type="redirect">findHouseByPage.action</result>
+		</action>
+		<action name="houseDel" class="com.dhcc.bussiness.house.HouseAction" method="houseDel">
+			<result type="json"></result>
+		</action>
+		<action name="qrimg" class="com.dhcc.bussiness.house.HouseAction" method="qrimg">
+			<result type="json"></result>
+		</action>
+		<action name="addHouse" class="com.dhcc.bussiness.house.HouseAction" method="addHouse">
+			<result name="success7" type="redirect">findHouseByPage.action</result>
+		</action>
+		<action name="uploadHouseFile" class="com.dhcc.bussiness.house.UploadAction" method="uploadHouseFile">
+			<result type="json"></result>
+		</action>
+		<action name="uploadHouse2" class="com.dhcc.bussiness.house.UploadAction" method="uploadHouse2">
+			<result type="json"></result>
+		</action>
+		<action name="queryHouseImg" class="com.dhcc.bussiness.house.UploadAction" method="queryHouseImg">
+			<result type="json"></result>
+		</action>
+		<action name="HomeQueryWeixiu" class="com.dhcc.bussiness.home.HomeQueryListAction" method="HomeQueryWeixiu">
+			<result type="json"></result>
+		</action>
+		<action name="HomeQueryDasao" class="com.dhcc.bussiness.home.HomeQueryListAction" method="HomeQueryDasao">
+			<result type="json"></result>
+		</action>
+		<action name="HomeQueryList" class="com.dhcc.bussiness.home.HomeQueryListAction" method="HomeQueryList">
+			<result type="json"></result>
+		</action>
+		<action name="changeHomeState" class="com.dhcc.bussiness.home.HomeQueryListAction" method="changeHomeState">
+			<result type="json"></result>
+		</action>
+		<action name="HomeQueryById" class="com.dhcc.bussiness.home.HomeQueryListAction" method="HomeQueryById">
+			<result type="json"></result>
+		</action>
+		<!-- 上线 -->
+		<action name="houseUp" class="com.dhcc.bussiness.house.HouseAction" method="houseUp">
+			<result type="json"></result>
+		</action>
+		<action name="houseDown" class="com.dhcc.bussiness.house.HouseAction" method="houseDown">
+			<result type="json"></result>
+		</action>
+		<!-- 上下线 -->
+		<action name="GoCheck" class="com.dhcc.bussiness.check.CheckAction" method="GoCheck">
+			<result type="json"></result>
+		</action>
+		<action name="insertOrder" class="com.dhcc.bussiness.order.OrderAction" method="insertOrder">
+			<result name="success" type="redirect">findOrderByPage.action</result>
+		</action>
+		<action name="findCode" class="com.dhcc.bussiness.sdk.FindCodeAction" method="findCode">
+			<result type="json"></result>
+		</action>
+		<action name="boss" class="com.dhcc.bussiness.sdk.FindCodeAction" method="boss">
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,83 @@
+/*用户中心*/
+#userCenter{
+    float:right;position:relative;width:auto;height:53px;
+    transition:all ease 0.8s;
+}
+.userName{
+    width:auto;height:70px;overflow:hidden;
+    display:block;
+}
+.userCenterSelect{
+    position:absolute;top:70px;left:0;
+    background:#fff;
+    border:1px solid rgba(217,218,220,1);
+    width:150px;
+    display:none;
+    border-radius:10px;
+    box-shadow:-1px 12px 22px 5px rgba(0,0,0,0.06);
+}
+.userCenterSelect .spanHover{
+    width:100%;
+    text-align:center;
+    padding:0 10px;
+    height:40px;
+    line-height:40px;
+    display:block;
+    color:#333;
+    cursor:pointer;
+    border-radius:10px;
+}
+.userCenterSelect .spanHover span{
+    margin-left:10px;
+}
+.spanHover img{
+    width:19px;
+    height:19px;
+    overflow:hidden;
+    line-height:25px;
+}
+.userCenterSelect .spanHover:hover{
+    background:#3478F6;
+    color:#fff;
+}
+/*通知公告*/
+.quick-area {
+	float: right;
+	width: 60%;
+}
+.pull-right{
+	float: right;
+	width: 60%;
+}
+.accountCenter{
+	position: relative;
+
+}
+.accountCenterSelect{
+	position: absolute;
+	right: 180px;
+	top: 70px;
+    border-radius:10px;
+    background:#fff;
+    box-shadow:-1px 12px 22px 5px rgba(0,0,0,0.06);
+}
+.accountCenterSelect .spanHover{
+    width:130px;
+    text-align:center;
+    padding:0 10px;
+    height:40px;
+    line-height:40px;
+    display:block;
+    color:#333;
+    cursor:pointer;
+    background-color: #FFFFFF;
+    border-radius:10px;
+    padding-bottom:10px;
+}
+.userCenterSelect .spanHover span{
+    margin-left:10px;
+}
+.accountCenterSelect span:hover{
+    background:#3478F6;
+    color:#fff;
+}

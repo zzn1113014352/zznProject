@@ -1,0 +1,198 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>房源详情</title>
+    <link rel="shortcut icon" href="<%=basePath %>assets/images/favicon.png" type="image/x-icon" />
+    <link href="<%=basePath %>assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="<%=basePath %>assets/swiper/swiper.min.css">
+    <link href="<%=basePath %>assets/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="<%=basePath %>assets/css/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="<%=basePath %>assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="<%=basePath %>assets/css/system.css" rel="stylesheet" type="text/css" />
+    <link href="<%=basePath %>assets/css/houseDetail.css" rel="stylesheet" type="text/css" />
+    <!--账户信息引进-->
+    <link href="<%=basePath %>assets/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="<%=basePath %>assets/css/order.css" rel="stylesheet" type="text/css" />
+    <link href="<%=basePath %>assets/css/accoutInfo.css" rel="stylesheet" type="text/css" />
+    <!--账户信息引进-->
+    <!--账户安全引进-->
+    <link href="<%=basePath %>assets/css/safe.css" rel="stylesheet" type="text/css" />
+    <link href="<%=basePath %>assets/js/lib/honeySwitch.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="<%=basePath %>assets/css/button/normalize.css">
+    <link rel="stylesheet" href="<%=basePath %>assets/css/button/style.css" media="screen" type="text/css" />
+    <!--账户安全引进-->
+    <!--版本介绍-->
+    <link href="<%=basePath %>assets/css/version.css" rel="stylesheet" type="text/css" />
+    <!--版本介绍-->
+</head>
+<style>
+	  .swiper-wrapper{
+        width:98%;
+        margin:0 auto;
+    }
+    .swiper-container{
+        width:90.5%;
+        /*margin:0 auto;*/
+        float:left!important;
+        margin-left:10px;
+        margin-right:10px;
+    }
+    /*.swiper-slide{*/
+        /*width:33%;*/
+        /*height:auto;*/
+        /*overflow:hidden;*/
+        /*text-align:center;*/
+    /*}*/
+    .detailImgBox{
+        position:relative;
+    }
+    .swiper-button-next{
+        position:absolute;
+        right:0;
+        z-index:100000;
+        opacity:1!important;
+    }
+    .swiper-button-prev{
+        position:absolute;
+        left:0;
+        z-index:100000;
+        opacity:1!important;
+    }
+</style>
+<body>
+<div class='page-topbar'>
+			<include src="daohang.jsp"></include>
+		</div>
+<div class="page-container row-fluid container-fluid">
+    <div class="page-sidebar fixedscroll">
+        <div class="page-sidebar-wrapper" id="main-menu-wrapper">
+           <include src="<%=basePath %>getFuMenu.action"></include>
+        </div>
+    </div>
+    <section id="main-content" class=" ">
+        <div class="wrapper main-wrapper row">
+            <div class="order-top clearfix">
+                <div class="order-left">
+                    <span class="chunk"></span>
+                    <span class="title">房源详情</span>
+                    <!--<span class="sync">同步房源</span>-->
+                    <!--<span class="batch">批量分组</span>-->
+                </div>
+                <div class="order-right">
+                    <span class="search edit-look" onclick="editHouse(${houseModel.id})">编辑</span>
+                </div>
+            </div>
+            <div class="content-box list">
+                <div class="detailTop">${houseModel.title }</div>
+                <div class="detailBox">
+                    <div class="detailShow">
+                   <%--  <% 
+                    	String imgs = ${houseModel.img };
+                    	application.setAttribute("imgs", imgs);
+                    %>
+                     <c:set value="${fn:split(imgs,';')}" var="img" /> --%>
+                        <div class="detailBoxLeft">
+                        
+                        <c:forEach items="${houseModel.img }" var="imgs" varStatus="vs">
+                        <c:if test="${fn:length(imgs)>='50'}">
+                            <div class="houseImg">
+                                <img src="http://114.116.128.50:8080/wy/house_img/${imgs}" alt=""/>
+                            </div>
+                        </c:if>    
+                        </c:forEach>
+                        
+                            <div class="detailImgBox">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                    <c:forTokens items="${houseModel.img }" delims=";" var="file"> 
+                                     <div class="swiper-slide">
+                                            <img src="http://114.116.128.50:8080/wy/house_img/${file}" alt=""/>
+                                        </div>
+                                     </c:forTokens>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                        <div class="detailBoxRight">
+                            <div class="detailBoxRightTitle">
+                                <span>${houseModel.rent }</span>
+                                <span class="commonStyle">元/月</span>
+                              <!--   <span class="commonStyle">整套房源</span> -->
+                            </div>
+                          <!--   <div class="housePlace">
+                                艾比迎2期7052
+                            </div> -->
+                            <div class="houseDetail">
+                                <div class="houseDetailTitle">
+                                    <span>房源：</span>
+                                    <span>所在平台：</span>
+                                    <span>房屋类型：</span>
+                                    <span>朝向楼层：</span>
+                                    <span>详细地址：</span>
+                                </div>
+                                <div class="houseDetailDes">
+                                    <span>${houseModel.house }</span>
+                                    <span>${houseModel.source }</span>
+                                    <span>${houseModel.house_type }</span>
+                                    <span>${houseModel.ceng }/共${houseModel.cengs }层</span>
+                                    <span>${houseModel.net_house_addr }</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="houseDes">
+                        <span>房源描述:</span>
+                        <p>
+                        	${houseModel.describes }
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+<script src="<%=basePath %>assets/js/jquery-1.11.2.min.js"></script>
+<script src="<%=basePath %>assets/swiper/swiper.min.js"></script>
+<script src="<%=basePath %>assets/js/citySelect/cityselect.js"></script>
+<script src="<%=basePath %>assets/js/common.js"></script>
+<script src="<%=basePath %>assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="<%=basePath %>assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="<%=basePath %>assets/plugins/viewport/viewportchecker.js"></script>
+<script src="<%=basePath %>assets/js/scripts.js"></script>
+<script src="<%=basePath %>assets/js/include.js"></script>
+</body>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+//        pagination: '.swiper-pagination',
+        slidesPerView: 3,
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 10
+    });
+    
+    //
+    $(".edit-look").click(function(){
+    	window.location.href = 'editHouse.jsp';
+    });
+    
+    function editHouse(id){
+		window.location.href="${pageContext.request.contextPath }/editHouseById.action?id=" + id;
+    };
+</script>
+</html>

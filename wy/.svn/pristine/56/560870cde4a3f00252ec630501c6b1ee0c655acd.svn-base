@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>房间查询</title>
+		<link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/reset.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/animate.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/system.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/order.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/roomQuery.css" rel="stylesheet" type="text/css" />
+		<!--账户信息引进-->
+		<link href="assets/css/common.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/order.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/accoutInfo.css" rel="stylesheet" type="text/css" />
+		<!--账户信息引进-->
+		<!--账户安全引进-->
+		<link href="assets/css/safe.css" rel="stylesheet" type="text/css" />
+		<link href="assets/js/lib/honeySwitch.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="assets/css/button/normalize.css">
+		<link rel="stylesheet" href="assets/css/button/style.css" media="screen" type="text/css" />
+		<!--版本介绍引进-->
+		<!-- -->
+		<link href="assets/css/version.css" rel="stylesheet" type="text/css" />
+		<!-- -->
+	</head>
+
+	<body>
+		<div class='page-topbar'>
+			<div class='logo-area'>
+				云&nbsp;&nbsp;&nbsp;&nbsp;客
+			</div>
+			<div class='quick-area'>
+				<div class='pull-right'>
+					<!--<a href="login.html" class="exit">-->
+					<!--<img src="assets/images/exit.png" />-->
+					<!--</a>-->
+					<div id="userCenter">
+						<span class="userName">
+							<img src="assets/images/tx.png" class="tx" />
+							<span class="name" style="width:auto;height:auto;overflow:hidden;">小小的鱼</span>
+						<span id="triggle">
+
+							</span>
+						</span>
+						<span class="userCenterSelect">
+							<span item="information" class="spanHover">
+								<img src="assets/images/icon/detail.png" alt=""/>
+								<span>账户信息</span>
+						</span>
+						<span item="safety" class="spanHover">
+								<img src="assets/images/icon/safe.png" alt=""/>
+								<span>账号安全</span>
+						</span>
+						<span item="intro" class="spanHover">
+								<img src="assets/images/icon/version.png" alt=""/>
+								<span>版本介绍</span>
+						</span>
+						<span item="exit" class="spanHover">
+								<img src="assets/images/icon/exit.png" alt=""/>
+								<span>退出登录</span>
+						</span>
+						</span>
+					</div>
+					<!--<span class="name">小小的鱼</span>-->
+					<!--<img src="assets/images/tx.png" class="tx" />-->
+					<div id="accountCenter">
+						<span class="userName">
+					<img src="assets/images/info.png" class="info" />
+				</span>
+						<span class="accountCenterSelect none">
+					<span item="system" class="spanHover">
+						<img src="assets/images/icon/system.png" alt=""/>
+						<span>系统公告</span>
+						</span>
+						<span item="service" class="spanHover">
+						<img src="assets/images/icon/notice.png" alt=""/>
+						<span>服务通知</span>
+						</span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-container row-fluid container-fluid">
+			<div class="page-sidebar fixedscroll">
+				<div class="page-sidebar-wrapper" id="main-menu-wrapper">
+					<include src="menu.html"></include>
+				</div>
+			</div>
+			<section id="main-content">
+				<div class="wrapper main-wrapper row">
+					<div class="order-top clearfix">
+						<div class="order-left">
+							<span class="chunk"></span>
+							<span class="title">房间查询</span>
+							<select class="choose plat">
+								<option value="选择平台">楼层</option>
+								<option value="选择平台">一楼 </option>
+								<option value="选择平台">二楼</option>
+								<option value="选择平台">三楼 </option>
+								<option value="选择平台">四楼</option>
+							</select>
+							<select class="choose">
+								<option value="选择平台">房型</option>
+								<option value="选择平台">已入住</option>
+								<option value="选择平台">已预订</option>
+								<option value="选择平台">已完成 </option>
+								<option value="选择平台">已住房</option>
+							</select>
+							<select class="choose">
+								<option value="选择平台">特性</option>
+								<option value="选择平台">学区房</option>
+								<option value="选择平台">地铁房</option>
+							</select>
+						</div>
+						<div class="order-right">
+							<span class="search order">搜索</span>
+							<input type="text" placeholder="输入房间号" class="write number" />
+						</div>
+					</div>
+					<div class="content-box">
+						<ul class="content-left clearfix">
+							<li>
+								<span class="jing"></span>
+								<i>空净</i>
+							</li>
+							<li>
+								<span class="zang"></span>
+								<i>空脏</i>
+							</li>
+							<li>
+								<span class="yizhu"></span>
+								<i>已住</i>
+							</li>
+							<li>
+								<span class="orders"></span>
+								<i>预定</i>
+							</li>
+							<li>
+								<img src="assets/images/roomXiu.png" />
+								<i>维修</i>
+							</li>
+							<li>
+								<img src="assets/images/roomSao.png" />
+								<i>打扫</i>
+							</li>
+							<span class="handUpdate">手动更新</span>
+						</ul>
+						<ul class="content clearfix">
+							<li class="jing" item="jing">
+							
+							
+								<span>1001</span>
+								<i>一室一厅</i>
+								<div class="set-status none">
+									<div item="1" class="none">空净</div>
+									<div item="2" class="none">空脏</div>
+									<div item="3" class="none">已住</div>
+									<div item="4" class="yuding" >预定</div>
+									<div item="5" class="none">维修</div>
+									<div item="6" class="none">打扫</div>
+								</div>
+								
+								
+							</li>
+							<li class="zhu show-more" item="zhu">
+								<span>1002</span>
+								<i>一室一厅</i>
+								<div class="show-box" style="display: none;">
+									<div class="point">
+										<span>.</span>
+									</div>
+									<div class="show-con">
+										<div>订单来源：途家</div>
+										<div>支付方式：支付宝</div>
+										<div>预订人：刘美</div>
+									</div>
+								</div>
+								<div class="set-status none">
+									<div item="1" class="none">空净</div>
+									<div class="kZang" item="2">空脏</div>
+									<div item="3" class="none">已住</div>
+									<div item="4" class="none">预定</div>
+									<div item="5">维修</div>
+									<div item="6">打扫</div>
+								</div>
+							</li>
+							<li class="zang" item="zang">
+								<span>1003</span>
+								<i>一室一厅</i>
+								<div class="set-status none">
+									<div item="1" class="none">空净</div>
+									<div item="2" class="none">空脏</div>
+									<div item="3" class="none">已住</div>
+									<div item="4" class="none">预定</div>
+									<div item="5">维修</div>
+									<div item="6">打扫</div>
+								</div>
+							</li>
+							<li class="orders show-more" item="orders">
+								<span>1004</span>
+								<i>一室一厅</i>
+								<div class="show-box" style="display: none;">
+									<div class="point">
+										<span>.</span>
+									</div>
+									<div class="show-con">
+										<div>订单来源：途家</div>
+										<div>支付方式：支付宝</div>
+										<div>入住人数：2人</div>
+										<div>入住人姓名：刘美，李东</div>
+									</div>
+								</div>
+								<div class="set-status none">
+									<div item="1">空净</div>
+									<div item="2" class="none">空脏</div>
+									<div item="3">已住</div>
+									<div item="4" class="none">预定</div>
+									<div item="5" class="none">维修</div>
+									<div item="6" class="none">打扫</div>
+								</div>
+							</li>
+							<li class="zhuSao" item="zhuSao">
+								<span>1005</span>
+								<i>一室一厅</i>
+								<div class="set-status none">
+									<div item="1" class="none">空净</div>
+									<div item="2" class="none">空脏</div>
+									<div item="3">已住</div>
+									<div item="4" class="none">预定</div>
+									<div item="5">维修</div>
+									<div item="6" class="none">打扫</div>
+								</div>
+							</li>
+							<li class="zangSao" item="zangSao">
+								<span>1006</span>
+								<i>一室一厅</i>
+								<div class="set-status none">
+									<div item="1">空净</div>
+									<div item="2" class="none">空脏</div>
+									<div item="3" class="none">已住</div>
+									<div item="4" class="none">预定</div>
+									<div item="5">维修</div>
+									<div item="6" class="none">打扫</div>
+								</div>
+							</li>
+							<li class="zhuXiu" item="zhuXiu">
+								<span>1007</span>
+								<i>一室一厅</i>
+								<div class="set-status none">
+									<div item="1" class="none">空净</div>
+									<div item="2">空脏</div>
+									<div item="3">已住</div>
+									<div item="4" class="none">预定</div>
+									<div item="5" class="none">维修</div>
+									<div item="6">打扫</div>
+								</div>
+							</li>
+							<!--<li class="jingXiu" item="jingXiu">
+								<span>1008</span>
+								<i>一室一厅</i>
+								<div class="set-status none">
+									<div item="1">空净</div>
+									<div item="2" class="none">空脏</div>
+									<div item="3" class="none">已住</div>
+									<div item="4">预定</div>
+									<div item="5" class="none">维修</div>
+									<div item="6">打扫</div>
+								</div>
+							</li>-->
+							<li class="zangXiu" item="zangXiu">
+								<span>1009</span>
+								<i>一室一厅</i>
+								<div class="set-status none">
+									<div item="1" class="none">空净</div>
+									<div item="2" class="none">空脏</div>
+									<div item="3" class="none">已住</div>
+									<div item="4" class="none">预定</div>
+									<div item="5" class="none">维修</div>
+									<div item="6">打扫</div>
+								</div>
+							</li>
+						</ul>
+						<div class="notice-bottom clearfix">
+							<div class="page-box">
+								<a href="#" class="sure">确定</a>
+								<input type="text" class="point-to" />
+								<span class="tiao">跳转到</span>
+								<ul class="page">
+									<li>
+										<a href="">
+											<</a>
+									</li>
+									<li>
+										<a href="#">1</a>
+									</li>
+									<li class="active">
+										<a href="#">2</a>
+									</li>
+									<li>
+										<a href="#">3</a>
+									</li>
+									<li>
+										<a href="#">></a>
+									</li>
+									<li>
+										<a href="#">>></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<script src="assets/js/jquery-1.11.2.min.js"></script>
+		<script src="assets/js/citySelect/cityselect.js"></script>
+		<script src="assets/js/common.js"></script>
+		<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+		<script src="assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+		<script src="assets/plugins/viewport/viewportchecker.js"></script>
+		<script src="assets/js/scripts.js"></script>
+		<script src="assets/js/include.js"></script>
+		<script type="text/javascript">
+			//已住和预定的弹窗
+			$(".show-more").hover(function(){
+				var index = $(this).index();
+				$(".content li").eq(index).children('.show-box').show();
+			},function(){
+				var index = $(this).index();
+				$(".content li").eq(index).children('.show-box').hide();
+			})
+			//状态修改函数
+			function statusChange(){
+				$('.set-status').find('div').click(function(){					
+				var item = $(this).parents('li').attr('item');
+				var subItem = $(this).attr('item');				
+				if( item == 'jing' ){
+					$(this).parents('li').removeAttr('class').addClass('orders');
+					$(this).parents('li').find('div').removeClass('none');
+					$(this).parents('li').find('div[item="2"]').addClass('none');
+					$(this).parents('li').find('div[item="4"]').addClass('none');
+					$(this).parents('li').find('div[item="5"]').addClass('none');
+					$(this).parents('li').find('div[item="6"]').addClass('none');
+					$(this).parents('li').attr('item','orders');						
+				}else if( item == 'zhu' ){						
+					if( subItem == 2 ){
+						$(this).parents('li').removeAttr('class').addClass('zang');
+						$(this).parents('li').find('div').removeClass('none');
+						$(this).parents('li').find('div[item="2"]').addClass('none');
+						$(this).parents('li').find('div[item="4"]').addClass('none');
+						$(this).parents('li').find('div[item="1"]').addClass('none');
+						$(this).parents('li').find('div[item="3"]').addClass('none');
+					}else if( subItem == 5 ){
+						$(this).parents('li').removeAttr('class').addClass('zhuXiu');
+						$(this).parents('li').find('div').removeClass('none');
+						$(this).parents('li').find('div[item="1"]').addClass('none');
+						$(this).parents('li').find('div[item="4"]').addClass('none');
+						$(this).parents('li').find('div[item="5"]').addClass('none');						
+					}else if( subItem == 6 ){
+						$(this).parents('li').removeAttr('class').addClass('zhuSao');
+						$(this).parents('li').find('div').removeClass('none');
+						$(this).parents('li').find('div[item="2"]').addClass('none');
+						$(this).parents('li').find('div[item="4"]').addClass('none');
+						$(this).parents('li').find('div[item="1"]').addClass('none');
+						$(this).parents('li').find('div[item="6"]').addClass('none');
+					}else if( subItem == 4 ){
+						$(this).parents('li').removeAttr('class').addClass('orders');
+						$(this).parents('li').find('div').removeClass('none');
+						$(this).parents('li').find('div[item="2"]').addClass('none');
+						$(this).parents('li').find('div[item="4"]').addClass('none');
+						$(this).parents('li').find('div[item="5"]').addClass('none');
+						$(this).parents('li').find('div[item="6"]').addClass('none');
+					}
+					$(this).parents('li').attr('item',$(this).parents('li').attr('class'));
+				}else if( item == 'zang' ){
+					if( subItem == 5 ){
+						$(this).parents('li').removeAttr('class').addClass('zangXiu');
+						$(this).parents('li').find('div').removeClass('none');
+						$(this).parents('li').find('div[item="2"]').addClass('none');
+						$(this).parents('li').find('div[item="4"]').addClass('none');
+						$(this).parents('li').find('div[item="5"]').addClass('none');
+						$(this).parents('li').find('div[item="1"]').addClass('none');
+						$(this).parents('li').find('div[item="3"]').addClass('none');
+					}else if( subItem == 6 ){
+						$(this).parents('li').removeAttr('class').addClass('zangSao');
+						$(this).parents('li').find('div').removeClass('none');
+						$(this).parents('li').find('div[item="2"]').addClass('none');
+						$(this).parents('li').find('div[item="4"]').addClass('none');
+						$(this).parents('li').find('div[item="6"]').addClass('none');								
+						$(this).parents('li').find('div[item="3"]').addClass('none');
+					}
+					$(this).parents('li').attr('item',$(this).parents('li').attr('class'));
+				}else if( item == 'orders' ){
+					if( subItem == 1 ){
+						$(this).parents('li').removeAttr('class').addClass('jing');
+						$(this).parents('li').find('div').removeClass('none');
+						$(this).parents('li').find('div[item="2"]').addClass('none');
+						$(this).parents('li').find('div[item="5"]').addClass('none');
+						$(this).parents('li').find('div[item="6"]').addClass('none');								
+						$(this).parents('li').find('div[item="3"]').addClass('none');
+						$(this).parents('li').find('div[item="1"]').addClass('none');
+					}else if( subItem == 3 ){
+						$(this).parents('li').removeAttr('class').addClass('zhu');
+						$(this).parents('li').find('div').removeClass('none');
+						$(this).parents('li').find('div[item="3"]').addClass('none');
+						$(this).parents('li').find('div[item="4"]').addClass('none');								
+						$(this).parents('li').find('div[item="1"]').addClass('none');
+					}
+					$(this).parents('li').attr('item',$(this).parents('li').attr('class'));
+				}else if( item == 'zhuSao' ){
+					if( subItem == 3 ){
+						$(this).parents('li').removeAttr('class').addClass('zhu');
+						$(this).parents('li').find('div').removeClass('none');
+						$(this).parents('li').find('div[item="3"]').addClass('none');
+						$(this).parents('li').find('div[item="4"]').addClass('none');								
+						$(this).parents('li').find('div[item="1"]').addClass('none');
+					}else if( subItem == 5 ){
+						$(this).parents('li').removeAttr('class').addClass('zhuXiu');
+						$(this).parents('li').find('div').removeClass('none');
+						$(this).parents('li').find('div[item="5"]').addClass('none');
+						$(this).parents('li').find('div[item="4"]').addClass('none');								
+						$(this).parents('li').find('div[item="1"]').addClass('none');
+					}
+					$(this).parents('li').attr('item',$(this).parents('li').attr('class'));
+				}else if( item == 'zangSao' ){
+					if( subItem == 1 ){
+							$(this).parents('li').removeAttr('class').addClass('jing');
+							$(this).parents('li').find('div').removeClass('none');
+							$(this).parents('li').find('div[item="5"]').addClass('none');
+							$(this).parents('li').find('div[item="2"]').addClass('none');								
+							$(this).parents('li').find('div[item="1"]').addClass('none');
+							$(this).parents('li').find('div[item="3"]').addClass('none');
+							$(this).parents('li').find('div[item="6"]').addClass('none');								
+					}else if( subItem == 5 ){
+						$(this).parents('li').removeAttr('class').addClass('zangXiu');
+						$(this).parents('li').find('div').removeClass('none');
+						$(this).parents('li').find('div[item="2"]').addClass('none');
+						$(this).parents('li').find('div[item="4"]').addClass('none');
+						$(this).parents('li').find('div[item="5"]').addClass('none');
+						$(this).parents('li').find('div[item="1"]').addClass('none');
+						$(this).parents('li').find('div[item="3"]').addClass('none');
+					}
+					$(this).parents('li').attr('item',$(this).parents('li').attr('class'));
+				}else if( item == 'zhuXiu' ){
+					if( subItem == 2 ){
+						$(this).parents('li').removeAttr('class').addClass('zang');
+						$(this).parents('li').find('div').removeClass('none');
+						$(this).parents('li').find('div[item="2"]').addClass('none');
+						$(this).parents('li').find('div[item="4"]').addClass('none');
+						$(this).parents('li').find('div[item="1"]').addClass('none');
+						$(this).parents('li').find('div[item="3"]').addClass('none');
+					}else if( subItem == 3 ){
+						$(this).parents('li').removeAttr('class').addClass('zhu');
+						$(this).parents('li').find('div').removeClass('none');
+						$(this).parents('li').find('div[item="3"]').addClass('none');
+						$(this).parents('li').find('div[item="4"]').addClass('none');								
+						$(this).parents('li').find('div[item="1"]').addClass('none');
+					}else if( subItem == 6 ){
+						$(this).parents('li').removeAttr('class').addClass('zhuSao');
+						$(this).parents('li').find('div').removeClass('none');
+						$(this).parents('li').find('div[item="2"]').addClass('none');
+						$(this).parents('li').find('div[item="4"]').addClass('none');
+						$(this).parents('li').find('div[item="1"]').addClass('none');
+						$(this).parents('li').find('div[item="6"]').addClass('none');
+					}
+					$(this).parents('li').attr('item',$(this).parents('li').attr('class'));
+				}else if( item == 'jingXiu' ){
+					if( subItem == 1 ){
+						$(this).parents('li').removeAttr('class').addClass('jing');
+						$(this).parents('li').find('div').removeClass('none');
+						$(this).parents('li').find('div[item="5"]').addClass('none');
+						$(this).parents('li').find('div[item="2"]').addClass('none');								
+						$(this).parents('li').find('div[item="1"]').addClass('none');
+						$(this).parents('li').find('div[item="3"]').addClass('none');
+						$(this).parents('li').find('div[item="6"]').addClass('none');	
+					}else if( subItem == 4 ){
+						$(this).parents('li').removeAttr('class').addClass('orders');
+						$(this).parents('li').find('div').removeClass('none');
+						$(this).parents('li').find('div[item="2"]').addClass('none');
+						$(this).parents('li').find('div[item="4"]').addClass('none');
+						$(this).parents('li').find('div[item="5"]').addClass('none');
+						$(this).parents('li').find('div[item="6"]').addClass('none');
+					}else if( subItem == 6 ){
+						$(this).parents('li').removeAttr('class').addClass('jingSao');
+						$(this).parents('li').find('div').removeClass('none');
+						$(this).parents('li').find('div[item="2"]').addClass('none');
+						$(this).parents('li').find('div[item="4"]').addClass('none');
+						$(this).parents('li').find('div[item="3"]').addClass('none');
+						$(this).parents('li').find('div[item="5"]').addClass('none');
+					}
+						$(this).parents('li').attr('item',$(this).parents('li').attr('class'));
+				}else if( item == 'zangXiu' ){
+						$(this).parents('li').removeAttr('class').addClass('zangSao');
+						$(this).parents('li').find('div').removeClass('none');
+						$(this).parents('li').find('div[item="2"]').addClass('none');
+						$(this).parents('li').find('div[item="4"]').addClass('none');
+						$(this).parents('li').find('div[item="6"]').addClass('none');								
+						$(this).parents('li').find('div[item="3"]').addClass('none');
+						$(this).parents('li').attr('item',$(this).parents('li').attr('class'));
+					}
+				})
+				
+			}
+			statusChange();
+			//房间状态设置弹窗
+			$(".handUpdate").click(function(){
+				$(".content li").hover(function(){
+					var item = $(this).attr('item');
+					var index = $(this).index();
+					$(".content li").css("cursor",'pointer');
+					$(".content li").eq(index).children('.set-status').show();
+					$(".content li").eq(index).children('.show-box').hide();
+					
+					
+				},function(){
+					var index = $(this).index();
+					$(".content li").eq(index).children('.set-status').hide();
+				})
+			})
+			
+			
+			
+			
+			//点击空净
+//			$(".set-status div:first-child").click(function(){
+//				$(this).parent().parent('li').css('background','rgba(52,120,247,1)');
+//			})
+			//点击空脏
+//			$(".set-status div:nth-child(2)").click(function(){
+//				$(this).parent().parent('li').css('background','#999999');
+//			})
+			//点击已住
+//			$(".set-status div:nth-child(3)").click(function(){
+//				$(this).parent().parent('li').css('background','#EB264B');
+//			})
+			//点击
+//			$(".set-status div:nth-child(5)").click(function(){
+//				$(this).parent().parent('li').css('background','');
+//			})
+			
+			//点击预定
+//			$(".set-status .yuding").click(function(){
+//				$(this).parent().parent('li').css({'border':'1px solid rgba(52,120,247,1)','background':'#ffffff'});
+//				$(this).parent().parent('li').children().css({'color':'#3478F6'});
+//			})
+//			//点击空脏
+//			$(".set-status .kZang").click(function(){
+//				$(this).parent().parent('li').css('background','#999999');
+//			})
+		</script>
+	</body>
+
+</html>

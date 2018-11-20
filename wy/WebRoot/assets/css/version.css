@@ -1,0 +1,72 @@
+@media only screen and (max-width: 1200px) {
+	.vertial-box{
+		width:1595px;
+		height: auto;
+		border-radius:4px;
+		background-color: #FFFFFF;
+		margin-top: 27px;
+	}
+	.vertial{
+		padding: 54px 0 107px 138px;
+	}
+	.vertial img{
+		float: left;
+		width: 21px;
+		margin-right: 20px;
+	}
+	.vertial .dang{
+		float: left;
+		font-size:18px;
+		color:rgba(83,83,83,1);
+		margin-right: 100px;
+	}
+	.vertial .ver-number{
+		float: left;
+		font-size:18px;
+		color: RGBA(148, 148, 148, 1);
+		margin-right: 170px;
+	}
+	.vertial ul{
+		float: left;
+	}
+	.vertial ul li{
+		line-height: 24px;
+		font-size: 18px;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.vertial-box{
+		width: 100%;
+		height: auto;
+		background-color: #FFFFFF;
+		margin-top: 17px;
+		border-radius: 3px;
+	}
+	.vertial{
+		padding: 34px 0 67px 86px;
+	}
+	.vertial img{
+		float: left;
+		width: 19px;
+		margin-right: 13px;
+	}
+	.vertial .dang{
+		float: left;
+		font-size:14px;
+		color: RGBA(83, 83, 83, 1);
+		margin-right: 63px;
+	}
+	.vertial .ver-number{
+		float: left;
+		font-size:14px;
+		color: RGBA(148, 148, 148, 1);
+		margin-right: 106px;
+	}
+	.vertial ul{
+		float: left;
+		margin-top: -6px;
+	}
+	.vertial ul li{
+		line-height: 2.6;
+	}
+}

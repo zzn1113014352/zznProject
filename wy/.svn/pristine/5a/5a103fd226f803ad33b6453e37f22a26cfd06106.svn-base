@@ -1,0 +1,212 @@
+/*大于600*/
+@media only screen and (max-width: 1200px) {
+    .forget-box{
+    	position: fixed;
+    	top: 261px;
+    	right: 204px;
+		width:533px;
+		height:607px;
+		background:rgba(255,255,255,1);
+		box-shadow:0px 0px 35px 0px rgba(0,0,0,0.08);
+		border-radius:10px;
+		opacity:0.8;
+	}
+	.forget-box .title{
+		text-align: center;
+		font-size: 36px;
+		color: #333;
+		line-height:30px;
+		padding-top: 94px;
+	}
+	.forget-box .phone{
+		display: block;
+		margin: 0 auto;
+		width: 290px;
+		height: 60px;
+		line-height: 60px;
+		padding: 0;
+		border-bottom: 1px solid #3478F7;
+		margin-top: 45px;
+		background: url(../images/login-icon-phone.png) no-repeat 0px 12px;
+		padding-left: 42px;
+		outline: none;
+		font-size: 18px;
+	}
+	.forget-box .yzm-box{
+		display: block;
+		width: 332px;
+		height: 46px;
+		padding: 0;
+		border-bottom: 1px solid #3478F7;
+		margin: 0 auto;
+		margin-top: 52px;
+	}
+	.forget-box .yzm-box .yzm-img{
+		display: block;
+		float: left;
+		width: 22px;
+		height: 25px;
+		margin-right: 18px;
+	}
+	.forget-box .yzm-box .yzm{
+		display: block;
+		float: left;
+		width: 170px;
+		margin-top: 3px;
+		font-size: 18px;
+	}
+	.forget-box .yzm-box .yzm-btn{
+		display: block;
+		float: right;
+		width:100px;
+		height:32px;
+		line-height: 32px;
+		background: #3478F6;
+		border-radius:17px;
+		font-size:12px;
+		text-align: center;
+		font-weight:400;
+		color:rgba(255,255,255,1);
+		cursor: pointer;
+	}
+	.forget-box .pass{
+		display: block;
+		margin: 0 auto;
+		width: 290px;
+		height: 60px;
+		line-height: 60px;
+		padding: 0;
+		border-bottom: 1px solid #3478F7;
+		background: url(../images/login-icon-password.png) no-repeat 0px 12px;
+		padding-left: 48px;
+		outline: none;
+		font-size: 18px;
+		margin-top: 20px;
+	}
+	.forget-box button{
+		display: block;
+		float: left;
+		width:185px;
+		height:52px;
+		background: #3478F6;
+		border-radius:26px;
+		height: 52px;
+		line-height: 52px;
+		margin-top: 42px;
+		font-size: 24px;
+		color: #FFFFFF;
+	}
+	.forget-box button.login{
+		margin-left: 86px;
+	}
+	.forget-box button.register{
+		background: #FFFFFF;
+		color: #333;
+	}
+}
+
+/*小于600*/
+@media only screen and (min-width: 1200px) {
+    .forget-box{
+    	position: fixed;
+		width:333px;
+		height:379px;
+		background:rgba(255,255,255,1);
+		box-shadow:0px 0px 35px 0px rgba(0,0,0,0.08);
+		border-radius:10px;
+		top: 163px;
+		right: 127px;
+		opacity:0.8;
+	}
+	.forget-box .title{
+		text-align: center;
+		font-size:30px;
+		color: #333333;
+		line-height:20px;
+		padding-top: 40px;
+	}
+	.forget-box .phone{
+		display: block;
+		width: 185px;
+		height: 40px;
+		line-height: 40px;
+		padding: 0;
+		border-bottom: 1px solid #3478F7;
+		margin: 26px auto 0 auto;
+		background: url(../images/login-icon-phone.png) no-repeat 0px 10px;
+		background-size: 13px 19px;
+		padding-left: 28px;
+		outline: none;
+	}
+	.forget-box .yzm-box{
+		display: block;
+		width: 213px;
+		height: 32px;
+		padding: 0;
+		border-bottom: 1px solid #3478F7;
+		margin: 0 auto;
+		margin-top: 28px;
+	}
+	.forget-box .yzm-box .yzm-img{
+		display: block;
+		float: left;
+		width: 14px;
+		height: 16px;
+		margin-right: 11px;
+	}
+	.forget-box .yzm-box .yzm{
+		display: block;
+		float: left;
+		width: 110px;
+	}
+	.forget-box .yzm-box .yzm-btn{
+		display: block;
+		float: right;
+		width:75px;
+		height:21px;
+		line-height: 21px;
+		background: #3478F6;
+		border-radius:10px;
+		font-size:12px;
+		text-align: center;
+		font-weight:400;
+		color: #FFFFFF;
+		cursor: pointer;
+	}
+	.forget-box .pass{
+		display: block;
+		width: 185px;
+		height: 40px;
+		line-height:40px;
+		padding: 0;
+		border-bottom: 1px solid #3478F7;
+		background: url(../images/login-icon-password.png) no-repeat -3px 11px;
+		background-size: 23px 21px;
+		padding-left: 30px;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+	.forget-box button{
+		display: block;
+		float: left;
+		width:80px;
+		height:33px;
+		line-height: 33px;
+		font-size: 16px;
+		color: #3478F6;
+		border-radius:16px;
+		margin-left: 106px;
+		margin-top: 26px;
+		background-color: #FFFFFF;
+		color: #333333;
+	}
+	.forget-box button.login{
+		margin-left: 70px;
+		margin-right: 40px;
+	}
+	.forget-box button.register{
+		background-color: #3478F6;
+		color: #FFFFFF;
+		margin-left: 0;
+	}
+}

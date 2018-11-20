@@ -1,0 +1,75 @@
+.clearfix{
+    margin-top:20px;
+}
+.inputStyle{
+    width:300px!important;
+}
+.radio{
+    width:15px!important;
+    height:15px!important;
+    overflow:hidden;
+    float:left;
+}
+.radioXuanxiang{
+    width:auto;
+    height:auto;
+    overflow:hidden;
+}
+.fangwumianji{
+    width:auto;
+    height:auto;
+    overflow:hidden;
+    float:left;
+}
+.fangwumianjii{
+    width:auto;
+    height:auto;
+    overflow:hidden;
+}
+.fangwumianjii div{
+    width:auto;
+    height:auto;
+    overflow:hidden;
+}
+.fangwumianji input{
+    float:left;
+}
+.radioXuanxiang span{
+    float:left;
+    margin-left:15px;
+}
+.address{
+    display:block;
+}
+.fangwumianjiSpan{
+    width:auto!important;
+    margin-left:10px;
+    margin-right:10px;
+}
+.duoxuan{
+    width:auto!important;
+    float:left;
+}
+/*.fangwumianjii{*/
+    /*float:left;*/
+/*}*/
+.floatInput{
+    float:left;
+}
+.bgColor{
+    background:rgb(246,246,246);
+    padding-left:10px;
+}
+.upload{
+    width: 100%!important;
+    height: 100%!important;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    opacity: 0;
+}
+.guizeTextarea{
+    display:none;
+}

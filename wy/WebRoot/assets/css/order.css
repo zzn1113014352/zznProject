@@ -1,0 +1,344 @@
+@media only screen and (max-width: 1200px) {
+	.order-left .choose{
+		width:131px;
+		height:35px;
+		border:1px solid #3478F6;
+		border-radius:18px;
+		padding-left: 20px;
+		color: #3478F6;
+		cursor: pointer;
+	}
+	.order-left .choose{
+		margin-right: 37px;
+	}
+	.order-left .choose:last-child{
+		margin-right: 0;
+	}
+	.order-left .choose option{
+		width:126px;
+		height:30px;
+		border:1px solid #3478F6;
+		border-radius:15px;
+	}
+	.order-right .search.order{
+		width: 111px;
+		height:35px;
+		line-height: 35px;
+		background: #3478F6;
+		border-radius:18px;
+	}
+	.order-right .search.order:hover{
+		background: rgba(52,120,246,0.7);
+	}
+	.order-right .write.number{
+		width:298px;
+	}
+	.notice-bottom .del{
+		margin-right: 26px;
+	}
+	.notice-bottom .edit{
+		width:23px;
+		font-size:18px;
+		color:rgba(91,91,91,1);
+	}
+	.notice-bottom .edit:hover{
+		color: #3478F6;
+	}
+	.look-order-box {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 1192px;
+		height: 802px;
+		margin-left: -596px;
+		margin-top: -401px;
+		background: rgba(255, 255, 255, 1);
+		box-shadow: 1px 1px 35px 0px rgba(0, 0, 0, 0.08);
+		border-radius: 10px;
+		z-index: 101;
+		color: #333333;
+	}
+	.look-order-box .title {
+		display: block;
+		font-size: 24px;
+		font-weight: 500;
+		color: rgba(64, 69, 87, 1);
+		line-height: 30px;
+		padding-top: 43px;
+		margin-left: 48px;
+		color: #333333;
+	}
+	.look-order-box ul {
+		padding-left: 60px;
+	}
+	.look-order-box ul li {
+		float: left;
+		width: 522px;
+		margin-top:50px;
+		color: #666666;
+		font-size: 18px;
+	}
+	.look-order-box ul li span {
+		display: block;
+		float: left;
+		width: 190px;
+		text-align: left;
+	}
+	.look-order-box ul li i {
+		display: block;
+		float: left;
+		width: 200px;
+		text-align: left;
+		margin-right: 20px;
+	}
+	.look-order-box ul li i:nth-child(2n){
+		width: 320px;
+		margin-right: 0;
+	}
+	.look-order-box .sure-btn {
+		margin: 0 auto;
+		width: 152px;
+		height: 52px;
+		line-height: 52px;
+		background: #3478F6;
+		border-radius: 26px;
+		margin-top: 66px;
+		font-size: 24px;
+		color: #FFFFFF;
+		text-align: center;
+		cursor: pointer;
+	}
+	.look-order-box .sure-btn:hover{
+		background: rgba(52,120,246,0.7);
+	}
+	.time{
+		width: 150px;
+	    height: 35px;
+	    font-size: 12px;
+	    border: 1px solid #3478F6;
+	    border-radius: 18px!important;
+	    padding-left: 9px;
+	    margin-top: 25px;
+	    color: #3478F6;
+	    cursor: pointer;
+	    font-size: 16px;
+	}
+	.add-order{
+		display: inline-block;
+		width: 111px;
+		height:35px;
+		line-height: 35px;
+		background: #3478F6;
+		border-radius:18px;
+		text-align: center;
+		font-size: 18px;
+		color: #FFFFFF;
+		cursor: pointer;
+	}
+	.add-order:hover{
+		background: rgba(52,120,246,0.7);
+	}
+	/*创建订单*/
+	.look-order-box ul li input{
+		height:35px;
+		overflow:hidden;
+		padding:0 5px;
+		font-size:18px;
+		color:#666;
+		border:1px solid #999;
+		border-radius:18px;
+	}
+	.look-order-box ul li select{
+		height:35px;
+		overflow:hidden;
+		font-size:18px;
+		color:#666;
+		border:1px solid #999;
+		border-radius:18px;
+		padding:0 5px;
+	}
+	.setupOrder .sure-btn{
+		width:180px;
+	}
+	/*创建订单*/
+}
+@media only screen and (min-width: 1200px) {
+	.order-left .choose{
+		width: 85px;
+		height: 22px;
+		font-size: 12px;
+		border:1px solid #3478F6;
+		border-radius:11px;
+		padding-left: 9px;
+		margin-top: 25px;
+		color: #3478F6;
+		cursor: pointer;
+	}
+	.order-left .choose{
+		margin-right: 20px;
+	}
+	.order-left .choose:last-child{
+		margin-right: 0;
+	}
+	.order-left .choose option{
+		width:126px;
+		height:30px;
+		border:1px solid #3478F6;
+		border-radius:15px;
+	}
+	.order-right .search.order{
+		width:69px;
+		height:22px;
+		line-height:22px;
+		background: #3478F6;
+		border-radius:18px;
+	}
+	.order-right .search.order:hover{
+		background: rgba(52,120,246,0.7);
+	}
+	.order-right .write.number{
+		width:188px;
+	}
+	.notice-bottom .del{
+		margin-right: 16px;
+	}
+	.notice-bottom .edit{
+		font-size:12px;
+		color:rgba(91,91,91,1);
+	}
+	.notice-bottom .edit:hover{
+		color: #3478F6;
+	}
+	.look-order-box {
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		width: 745px;
+		height: 502px;
+		margin-left: -373px;
+		margin-top: -250px;
+		background: rgba(255, 255, 255, 1);
+		box-shadow: 1px 1px 35px 0px rgba(0, 0, 0, 0.08);
+		border-radius: 6px;
+		z-index: 101;
+	}
+	.look-order-box .title {
+		display: block;
+		font-size: 14px;
+		font-weight: 500;
+		color: rgba(64, 69, 87, 1);
+		padding-top: 20px;
+		margin-left: 30px;
+		color: #333333;
+	}
+	.look-order-box ul {
+		padding-top: 5px;
+		padding-left: 40px;
+	}
+	.look-order-box ul li {
+		width: 350px;
+		float: left;
+		margin-top: 24px;
+		color: #666666;
+		font-size: 12px;
+	}
+	.look-order-box ul li span {
+		display: block;
+		width: 128px;
+		float: left;
+		text-align: left;
+		margin-right: 0px;
+	}
+	.look-order-box ul li i {
+		display: block;
+		float: left;
+		width: 125px;
+		text-align: left;
+		margin-right: 20px;
+	}
+	.look-order-box ul li i:nth-child(2n){
+		width: 215px;
+		margin-right: 0;
+	}
+	.look-order-box .sure-btn{
+		margin: 0 auto;
+		width: 95px;
+		height: 33px;
+		line-height: 33px;
+		background: #3478F6;
+		border-radius: 16px;
+		margin-top: 25px;
+		font-size: 14px;
+		color: #FFFFFF;
+		text-align: center;
+		cursor: pointer;
+	}
+	.look-order-box .sure-btn:hover{
+		background: rgba(52,120,246,0.7);
+	}
+	.time{
+		width: 130px;
+	    height: 22px;
+	    font-size: 12px;
+	    border: 1px solid #3478F6;
+	    border-radius: 10px!important;
+	    padding-left: 9px;
+	    margin-top: 25px;
+	    color: #3478F6;
+	    cursor: pointer;
+	}
+	.add-order{
+		display: inline-block;
+		width: 69px;
+	    height: 22px;
+	    line-height: 22px;
+	    background: #3478F6;
+	    color: #FFFFFF;
+	    border-radius: 18px;
+	    text-align: center;
+	    cursor: pointer;
+	}
+	.add-order:hover{
+		background: rgba(52,120,246,0.7);
+	}
+	/*创建订单*/
+	.look-order-box ul li input{
+		height:22px;
+		overflow:hidden;
+		padding:0 5px;
+		font-size:12px;
+		color:#666;
+		border:1px solid #999;
+		border-radius:11px;
+	}
+	.look-order-box ul li select{
+		height:22px;
+		overflow:hidden;
+		font-size:12px;
+		color:#666;
+		border:1px solid #999;
+		border-radius:11px;
+		padding:0 5px;
+	}
+	.setupOrder .sure-btn{
+		width:120px;
+	}
+	/*创建订单*/
+}
+.setUpMa span{
+	display:block;
+	width:100%;
+	height:auto;
+	overflow:hidden;
+}
+.erweima{
+	text-align:center;
+	margin-top:60px;
+}
+.erweima img{
+	width:220px;
+}
+.erweimatext{
+	text-align:center;
+	margin-top:60px;
+}

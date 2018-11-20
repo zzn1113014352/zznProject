@@ -1,0 +1,321 @@
+@media only screen and (max-width: 1200px) {
+    .detailTop{
+        width:100%;
+        height:auto;
+        overflow:hidden;
+        padding-left:78px;
+        margin-top:40px;
+        color:#333;
+        font-size:24px;
+    }
+    .detailBox{
+        width:auto;
+        height:auto;
+        overflow:hidden;
+    }
+    .detailBoxLeft{
+        width:440px;
+        height:385px;
+        overflow:hidden;
+        margin-top:28px;
+        margin-left:49px;
+        float:left;
+    }
+    .houseImg{
+        width:100%;
+        height:290px;
+        overflow:hidden;
+        border-radius:10px;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 80px;
+        overflow:hidden;
+    }
+    .swiper-slide img{
+        width:118px;
+        height:80px;
+        overflow:hidden;
+        border-radius:10px;
+    }
+    /*.targetStyle{*/
+        /*width:13px;*/
+        /*height:80px;*/
+        /*overflow:hidden;*/
+        /*float:left;*/
+        /*background:#3478F7;*/
+        /*opacity:0.5;*/
+    /*}*/
+    .detailImgBox{
+        width:100%;
+        height:auto;
+        overflow:hidden;
+        /*background:#3478F7;*/
+        /*opacity:0.5;*/
+        border-radius:6px;
+        margin-top:15px;
+    }
+    .detailBoxRight{
+        width:auto;
+        height:385px;
+        overflow:hidden;
+        float:left;
+        margin-left:96px;
+        margin-top:28px;
+    }
+    .detailBoxRightTitle{
+        width:auto;
+        height:auto;
+        overflow:hidden;
+        color:#3478F7;
+    }
+    .detailBoxRightTitle span:first-child{
+        font-size:36px;
+    }
+    .commonStyle{
+        font-size:14px;
+    }
+    .detailBoxRightTitle span:last-child{
+        padding-left:27px;
+    }
+    .detailShow{
+        width:auto;
+        height:auto;
+        overflow:hidden;
+    }
+    .housePlace{
+        width:auto;
+        height:auto;
+        overflow:hidden;
+        font-size:18px;
+        font-weight:normal;
+        color:rgba(51,51,51,1);
+        margin-top:37px;
+    }
+    .houseDetail{
+        width:auto;
+        height:auto;
+        overflow:hidden;
+        margin-top:37px;
+    }
+    .houseDetailTitle{
+        font-size:18px;
+        color:#333;
+        float:left;
+    }
+    .houseDetailTitle span{
+        display:block;
+        margin-top:8px;
+    }
+    .houseDetailDes{
+        font-size:18px;
+        color:#666;
+        float:left;
+        margin-left:60px;
+    }
+    .houseDetailDes span{
+        display:block;
+        margin-top:8px;
+    }
+    .houseDes{
+        width:auto;
+        height:auto;
+        overflow:hidden;
+        margin-left:78px;
+        margin-top:65px;
+        margin-bottom:200px;
+    }
+    .houseDes span{
+        font-size:18px;
+        color:#333;
+        float:left;
+    }
+    .houseDes p{
+        width:1290px;
+        font-size:18px;
+        color:#666;
+        float:left;
+        margin-left:55px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .detailTop{
+        width:auto;
+        height:auto;
+        overflow:hidden;
+        margin-left:49px;
+        margin-top:25px;
+        color:#333;
+        font-size:15px;
+    }
+    .detailBox{
+        width:auto;
+        height:auto;
+        overflow:hidden;
+    }
+    .detailBoxLeft{
+        width:270px;
+        height:240px;
+        overflow:hidden;
+        margin-top:28px;
+        margin-left:49px;
+        float:left;
+    }
+    .houseImg{
+        width:100%;
+        height:180px;
+        overflow:hidden;
+        border-radius:6px;
+    }
+    .targetStyle{
+        width:13px;
+        height:48px;
+        overflow:hidden;
+        float:left;
+        background:#3478F7;
+        opacity:0.5;
+    }
+    .detailImgBox{
+        width:100%;
+        height:auto;
+        overflow:hidden;
+        /*background:#3478F7;*/
+        /*opacity:0.5;*/
+        border-radius:6px;
+        margin-top:10px;
+    }
+    .detailBoxRight{
+        width:auto;
+        height:240px;
+        overflow:hidden;
+        float:left;
+        margin-left:96px;
+        margin-top:28px;
+    }
+    .detailBoxRightTitle{
+        width:auto;
+        height:auto;
+        overflow:hidden;
+        color:#3478F7;
+    }
+    .detailBoxRightTitle span:first-child{
+        font-size:24px;
+    }
+    .commonStyle{
+        font-size:10px;
+    }
+    .detailBoxRightTitle span:last-child{
+        padding-left:18px;
+    }
+    .detailShow{
+        width:auto;
+        height:auto;
+        overflow:hidden;
+    }
+    .housePlace{
+        width:auto;
+        height:auto;
+        overflow:hidden;
+        font-size:12px;
+        font-weight:normal;
+        color:rgba(51,51,51,1);
+        margin-top:10px;
+    }
+    .houseDetail{
+        width:auto;
+        height:auto;
+        overflow:hidden;
+        margin-top:5px;
+    }
+    .houseDetailTitle{
+        font-size:12px;
+        color:#333;
+        float:left;
+    }
+    .houseDetailTitle span{
+        display:block;
+        margin-top:10px;
+        font-size: 14px;
+    }
+    .houseDetailDes{
+        font-size:14px;
+        color:#666;
+        float:left;
+        margin-left:37px;
+    }
+    .houseDetailDes span{
+        display:block;
+        margin-top:10px;
+    }
+    .houseDes{
+        width:auto;
+        height:auto;
+        overflow:hidden;
+        margin-left:49px;
+        margin-top:40px;
+        margin-bottom:128px;
+    }
+    .houseDes span{
+        font-size:14px;
+        color:#333;
+        float:left;
+    }
+    .houseDes p{
+        width:800px;
+        font-size:14px;
+        color:#666;
+        float:left;
+        margin-left:34px;
+        line-height: 2.4;
+        margin-top: -5px;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 50px;
+        overflow:hidden;
+    }
+    .swiper-slide img{
+        width:74px;
+        height:49px;
+        overflow:hidden;
+        border-radius:6px;
+    }
+}
+.list{
+    margin-top:17px;
+    padding:1px;
+    overflow:hidden;
+}
+/**/
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+/*.swiper-wrapper{*/
+    /*float:left!important;*/
+    /*width:230px!important;*/
+    /*overflow:hidden;*/
+/*}*/
+.swiper-button-prev{
+    background-size:100% 20px;
+}
+.swiper-button-next{
+    float:right!important;
+    background-size:100% 20px;
+    transform:rotate(180deg);
+}
+/**/

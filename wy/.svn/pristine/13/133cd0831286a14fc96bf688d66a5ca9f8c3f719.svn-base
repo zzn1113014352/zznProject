@@ -1,0 +1,77 @@
+@media only screen and (max-width: 1200px) {
+	.update-box{
+		width:1595px;
+		height:auto;
+		background:rgba(255,255,255,1);
+		border-radius:4px;
+		margin-top: 27px;
+		padding: 58px 0 67px 0;
+	}
+	.update-box li{
+		width: 100%;
+		height:auto;
+		overflow:hidden;
+		padding-left: 150px;
+		margin-bottom: 38px;
+	}
+	.update-box li.on i{
+		font-size: 18px;
+		color: #999;
+	}
+	.update-box li i{
+		display: block;
+		float: left;
+		width: 185px;
+		font-size:18px;
+		color:rgba(83,83,83,1);
+	}
+	.update-box li .password{
+		padding-left: 15px;
+		width: 138px;
+		height:27px;
+		font-size: 18px;
+		border:1px solid #3478F6;
+		border-radius:14px;
+	}
+	.update-box li.on input{
+		border:1px solid #999;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.update-box{
+		width: 1003px;
+		background: #FFFFFF;
+		margin-top: 17px;
+		padding: 36px 0 46px 94px;
+	}
+	.update-box li{
+		width: 100%;
+		height:auto;
+		overflow:hidden;
+		padding-left: 94px;
+		margin-bottom: 24px;
+	}
+	.update-box li.on i{
+		font-size: 12px;
+		color: #999;
+	}
+	.update-box li i{
+		display: block;
+		float: left;
+		width: 115px;
+		font-size:12px;
+		font-style: normal;
+		color:rgba(83,83,83,1);
+	}
+	.update-box li .password{
+		padding-left: 15px;
+		width:86px;
+		height:17px;
+		font-size: 12px;
+		border:1px solid #3478F6;
+		border-radius:8px;
+	}
+	.update-box li.on input{
+		border:1px solid #999;
+	}
+}

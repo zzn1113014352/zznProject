@@ -1,0 +1,236 @@
+::-webkit-input-placeholder {
+	color: #333;
+}
+
+
+/* 使用webkit内核的浏览器 */
+
+:-moz-placeholder {
+	color: #333;
+}
+
+
+/* Firefox版本4-18 */
+
+::-moz-placeholder {
+	color: #333;
+}
+
+
+/* Firefox版本19+ */
+
+:-ms-input-placeholder {
+	color: #333;
+}
+@media only screen and (max-width: 1200px){
+	.content{
+		width: 100%;
+		padding: 0 62px 100px 62px;
+	}
+	.return{
+		width: 35px;
+		height: 35px;
+		margin-right: 60px;
+		cursor: pointer;
+	}
+	.content li{
+		width: 100%;
+		margin-top: 60px;
+	}
+	.content li.titles{
+		font-size: 24px;
+		color:#3478F7;
+	}
+	.content li span{
+		display: block;
+		float: left;
+		width: 165px;
+		color: #333333;
+		font-size: 18px;
+	}
+	.content li select{
+		display: block;
+		float: left;
+		width: 175px;
+		height: 35px;
+		border:1px solid rgba(153,153,153,1);
+		border-radius: 18px;
+		padding-left: 15px;
+		color: #333333;
+		font-size: 18px;
+	}
+	.content li input{
+		width: 300px;
+		height: 35px;
+		line-height: 35px;
+		border:1px solid rgba(153,153,153,1);
+		border-radius: 18px;
+		padding-left: 12px;
+		font-size: 18px;
+	}
+	.content li textarea{
+		width: 640px;
+		height: 150px;
+		border:1px solid rgba(153,153,153,1);
+		border-radius:18px;
+		padding: 10px;
+		font-size: 18px;
+	}
+	.content li.house-type label{
+		margin-right: 32px;
+	}
+	.content li.house-type input{
+		width: 98px;
+		height: 35px;
+	}
+	.content li.zujin input{
+		width: 132px;
+		height: 35px;
+	}
+	.content li.title input{
+		width: 640px;
+		height: 35px;
+	}
+	.content li .img-box{
+		display: inline-block;
+		width: 228px;
+		height: 138px;
+		border:1px solid rgba(153,153,153,1);
+		border-radius: 18px;
+	}
+	.content li .img-box img{
+		display: block;
+		margin: 0 auto;
+		width: 96px;
+		height: 96px;
+		margin-top: 25px;
+	}
+	.save{
+		display: block;
+		width: 152px;
+		height: 52px;
+		line-height:52px;
+		background:rgba(52,120,247,1);
+		border-radius: 26px;
+		text-align: center;
+		color: #FFFFFF;
+		font-size: 24px;
+		margin: 0 auto;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.content{
+		width: 100%;
+		padding: 0 40px 50px 40px;
+	}
+	.return{
+		width: 22px;
+		height: 22px;
+		margin-right: 25px;
+		margin-top: 20px;
+		cursor: pointer;
+	}
+	.content li{
+		width: 100%;
+		margin-top: 30px;
+	}
+	.content li.titles{
+		font-size:16px;
+		color:#3478F7;
+		line-height:24px;
+		padding-top: 30px;
+	}
+	.content li span{
+		display: block;
+		float: left;
+		width: 150px;
+		color: #333333;
+	}
+	.content li select{
+		display: block;
+		float: left;
+		width: 109px;
+		height: 22px;
+		border:1px solid rgba(153,153,153,1);
+		border-radius: 10px;
+		padding-left: 10px;
+		margin-right: 20px;
+		color: #333333;
+	}
+	.content li input{
+		width: 190px;
+		height: 22px;
+		line-height: 22px;
+		border:1px solid rgba(153,153,153,1);
+		border-radius: 10px;
+		padding-left: 10px;
+	}
+	.content li textarea{
+		width:399px;
+		height:95px;
+		border:1px solid rgba(153,153,153,1);
+		border-radius:10px;
+		padding: 10px;
+	}
+	.content li.house-type label{
+		margin-right: 20px;
+	}
+	.content li.house-type input{
+		width: 60px;
+		height: 22px;
+	}
+	.content li.zujin input{
+		width: 83px;
+		height: 22px;
+	}
+	.content li.title input{
+		width: 400px;
+		height: 22px;
+	}
+	.content li .img-box{
+		display: inline-block;
+		width: 142px;
+		height: 86px;
+		border:1px solid rgba(153,153,153,1);
+		border-radius:12px;
+		position:relative;
+	}
+	#upload{
+		width:100%;
+		height:100%;
+		overflow:hidden;
+		position:absolute;
+		z-index:10000;
+		opacity: 0;
+	}
+	.content li .img-box img{
+		display: block;
+		margin: 0 auto;
+		width: 60px;
+		height: 60px;
+		margin-top: 16px;
+	}
+	.save{
+		display: block;
+		width:95px;
+		height:33px;
+		line-height:33px;
+		background:rgba(52,120,247,1);
+		border-radius:16px;
+		text-align: center;
+		color: #FFFFFF;
+		margin: 0 auto;
+	}
+	.save:hover{
+		background: rgba(52,120,246,0.7);
+	}
+}
+.border-red{
+	border: 1px solid #fc798f!important;
+}
+
+/**/
+.income-box .income{
+	margin-top:0!important;
+}
+/**/
